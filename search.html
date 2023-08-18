@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.0.0/themes/reset-min.css"
+        integrity="sha256-2AeJLzExpZvqLUxMfcs+4DWcMwNfpnjUeAAvEtPr0wU=" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.19.1/dist/algoliasearch-lite.umd.js"
+        integrity="sha256-qzlNbRtZWHoUV5I2mI2t9QR7oYXlS9oNctX+0pECXI0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.56.9/dist/instantsearch.production.min.js"
+        integrity="sha256-8AA0iLtMtPZvYXCp1M0yOWKK/PkffhvDt+1yl7bNtCw=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="searchbox"></div>
+    <div id="hits"></div>
+    <script>
+        const searchClient = algoliasearch('8Z5XBTCS67', 'd7542c85dae057fc2a49cbde256ba39b');
+
+        const search = instantsearch({
+            indexName: 'search_contents',
+            searchClient,
+        });
+
+        search.addWidgets([
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+            }),
+
+            instantsearch.widgets.hits({
+                container: '#hits',
+            })
+        ]);
+
+        search.start();
+
+    </script>
+</body>
+
+</html>
