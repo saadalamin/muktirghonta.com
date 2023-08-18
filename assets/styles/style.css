@@ -204,11 +204,13 @@ body {
   padding: 0.5rem 0;
   line-height: 1.5rem;
 }
-.__footer a, .__footer span {
+.__footer a,
+.__footer span {
   color: #fff;
   font-size: 0.85rem;
 }
-.__footer a:hover, .__footer span:hover {
+.__footer a:hover,
+.__footer span:hover {
   color: #3498db;
 }
 .__footer .container:first-child {
@@ -217,7 +219,8 @@ body {
 .__footer .container:first-child h5 {
   margin-bottom: 1rem;
 }
-.__footer .container:first-child a, .__footer .container:first-child span {
+.__footer .container:first-child a,
+.__footer .container:first-child span {
   margin-bottom: 0.5rem;
 }
 
@@ -276,4 +279,66 @@ body {
   .__navbar .navbar-brand img {
     width: 120px;
   }
+}
+/*__404-page */
+.__404-page {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 50px auto 40px auto;
+  max-width: 600px;
+  text-align: center;
+}
+.__404-page a {
+  color: #4183c4;
+  text-decoration: none;
+}
+.__404-page a:hover {
+  text-decoration: underline;
+}
+.__404-page h1 {
+  letter-spacing: -1px;
+  line-height: 60px;
+  font-size: 60px;
+  font-weight: 100;
+  margin: 0px 0 50px 0;
+  text-shadow: 0 1px 0 #fff;
+}
+.__404-page p {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 20px 10px;
+  line-height: 1.6;
+}
+.__404-page ul {
+  list-style: none;
+  margin: 25px 0;
+  padding: 0;
+}
+.__404-page li {
+  display: table-cell;
+  font-weight: bold;
+  width: 1%;
+}
+.__404-page .logo {
+  display: inline-block;
+  margin-top: 35px;
+}
+.__404-page .logo-img-2x {
+  display: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .__404-page .logo-img-1x {
+    display: none;
+  }
+  .__404-page .logo-img-2x {
+    display: inline-block;
+  }
+}
+.__404-page #suggestions {
+  margin-top: 35px;
+  color: #ccc;
+}
+.__404-page #suggestions a {
+  color: #666666;
+  font-weight: 200;
+  font-size: 14px;
+  margin: 0 10px;
 }
