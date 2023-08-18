@@ -280,6 +280,26 @@ body {
     width: 120px;
   }
 }
+/**__Search-section**/
+.__search-page .search-results {
+  margin-top: 2rem;
+}
+.__search-page .search-results .search-result {
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+.__search-page .search-results .search-result .search-result-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.__search-page .search-results .search-result .search-result-content {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
 /*__404-page */
 .__404-page {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
