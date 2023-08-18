@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght&family=Playfair+Display:wght@700@700&display=swap");
 
 $primary-color: #f5f5f5;
 $primary-text-color: #333;
@@ -7,10 +7,26 @@ $secondary-text-color: #fff;
 $last-color: #121217;
 $last-text-color: #fff;
 
+/*** SCROLLBAR ***/
+body::-webkit-scrollbar {
+ width: 0.3em;
+ background-color: rgba(255, 255, 255, 0.2);
+}
+body::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+ background-color: #708090;
+}
+
+* {
+ box-sizing: border-box;
+ font-family: "Montserrat", sans-serif;
+}
+
 body {
  background-color: $primary-color;
  color: $primary-text-color;
- font-family: "Montserrat", sans-serif;
  scroll-behavior: smooth;
 }
 
@@ -50,9 +66,9 @@ body {
 
 /**__Navigation-Bar**/
 .__navbar {
- background-color: $primary-color;
+ background-color: white;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
- height: 70px;
+ height: 60px;
  user-select: none;
  z-index: 1000;
  .__left,
@@ -79,10 +95,10 @@ body {
     color: $primary-text-color;
     font-size: 0.9rem;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0 0.8rem;
     &.active {
-     color: #3498db;
+     font-weight: 700;
     }
     &:hover {
      color: rgba($primary-text-color, 0.5);
@@ -104,14 +120,14 @@ body {
   color: $primary-text-color;
   font-size: 1rem;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0.5rem 1.8rem;
   border-bottom: 1px dashed transparent;
   &.active {
-   color: #3498db;
+   font-weight: 700;
   }
   &:hover {
-   border-bottom: 1px dashed #3498db;
+   border-bottom: 1px solid $primary-text-color;
   }
  }
 }
@@ -144,9 +160,10 @@ body {
    transition: padding 0.2s ease-in-out;
   }
   h2 {
-   font-size: 3rem;
+   font-size: 3.5rem;
    font-weight: 800;
    margin-bottom: 1.5rem;
+   color: $secondary-color;
   }
   p {
    font-size: 1rem;
@@ -213,20 +230,21 @@ body {
   background-repeat: repeat;
   padding: 1rem 2rem;
   h2 {
-   font-size: 3rem;
+   font-size: 5rem;
    font-weight: 800;
    margin: 2.5rem 0;
    color: $secondary-color;
+   font-family: "Playfair Display", serif;
    text-align: center;
   }
   p {
-   max-width: 800px;
+   max-width: 900px;
    font-size: 0.9rem;
    margin: 0 auto;
    margin-bottom: 4rem;
    color: $secondary-color;
    font-weight: 500;
-   line-height: 1.55rem;
+   line-height: 1.3rem;
   }
  }
  /**__title-section**/
@@ -260,7 +278,6 @@ body {
     aspect-ratio: 3/3;
     border-radius: 0.6rem;
     &:hover {
-     transform: scale(0.9);
      opacity: 0.8;
     }
    }
@@ -278,10 +295,30 @@ body {
   }
  }
 }
+/**__Achieve**/
+.__achieve {
+ /**__hero-section**/
+ .__hero-section {
+  width: 100%;
+  min-height: 20vh;
+  position: relative;
+  background-color: $secondary-color;
+  padding: 1rem 2rem;
+  h2 {
+   font-size: 2.2rem;
+   font-weight: 800;
+   margin: 2.5rem 0;
+   color: $secondary-text-color;
+   font-family: "Playfair Display", serif;
+   text-align: center;
+  }
+ }
+}
 /////////////////////
 /**__Footer**/
 .__footer {
- background-color: $last-color;
+ background-color: $secondary-color;
+ background-image: url("../images/blue-banner.jpg");
  color: $last-text-color;
  padding: 5rem 1rem;
  p {
@@ -294,7 +331,7 @@ body {
   color: $last-text-color;
   font-size: 0.85rem;
   &:hover {
-   color: $secondary-color;
+   color: #3498db;
   }
  }
  .container:first-child {
@@ -305,6 +342,21 @@ body {
   a,
   span {
    margin-bottom: 0.5rem;
+  }
+ }
+ .container:last-child {
+  .row > div:nth-child(2) {
+   a {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    img {
+     width: 30px;
+     height: 30px;
+     object-fit: cover;
+     margin-right: 1rem;
+    }
+   }
   }
  }
 }
@@ -325,7 +377,7 @@ body {
  .__home {
   .__hero-section {
    h2 {
-    font-size: 2rem;
+    font-size: 3rem;
    }
    p {
     font-size: 0.8rem;
@@ -348,7 +400,7 @@ body {
     padding: 0 1rem;
    }
    h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
    }
    p {
     font-size: 0.9rem;
@@ -364,13 +416,37 @@ body {
    }
   }
  }
+ .__footer {
+  .container:last-child {
+   .row > div:nth-child(2) {
+    text-align: left !important;
+   }
+  }
+ }
 }
 @media (max-width: 768px) {
  .__navbar {
-  height: 60px;
+  height: 55px;
   .navbar-brand {
    img {
     width: 120px;
+   }
+  }
+ }
+ .__about {
+  .__hero-section {
+   h2 {
+    font-size: 3rem;
+   }
+  }
+  .__list-person {
+   .row {
+    img {
+     width: 70%;
+    }
+    h3 {
+     font-size: 1.4rem;
+    }
    }
   }
  }

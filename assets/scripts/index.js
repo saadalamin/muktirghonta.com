@@ -18,7 +18,7 @@ searchBox.innerHTML = `<div class="modal fade" id="searchPage" tabindex="-1"><di
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">Search</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-round-effect p-3 shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
          <div class="modal-body" id="algolia-search-box" >
             <div class="d-flex">

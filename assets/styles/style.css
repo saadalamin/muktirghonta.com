@@ -1,8 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght&family=Playfair+Display:wght@700@700&display=swap");
+/*** SCROLLBAR ***/
+body::-webkit-scrollbar {
+  width: 0.3em;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #708090;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   background-color: #f5f5f5;
   color: #333;
-  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -29,9 +47,9 @@ body {
 
 /**__Navigation-Bar**/
 .__navbar {
-  background-color: #f5f5f5;
+  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  height: 70px;
+  height: 60px;
   user-select: none;
   z-index: 1000;
 }
@@ -57,11 +75,11 @@ body {
   color: #333;
   font-size: 0.9rem;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0.8rem;
 }
 .__navbar .__right .__menu-2 a.active {
-  color: #3498db;
+  font-weight: 700;
 }
 .__navbar .__right .__menu-2 a:hover {
   color: rgba(51, 51, 51, 0.5);
@@ -81,15 +99,15 @@ body {
   color: #333;
   font-size: 1rem;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0.5rem 1.8rem;
   border-bottom: 1px dashed transparent;
 }
 .__menu-1 a.active {
-  color: #3498db;
+  font-weight: 700;
 }
 .__menu-1 a:hover {
-  border-bottom: 1px dashed #3498db;
+  border-bottom: 1px solid #333;
 }
 
 /**__Home**/
@@ -122,9 +140,10 @@ body {
   transition: padding 0.2s ease-in-out;
 }
 .__home .__hero-section h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
+  color: #12225b;
 }
 .__home .__hero-section p {
   font-size: 1rem;
@@ -208,20 +227,21 @@ body {
   padding: 1rem 2rem;
 }
 .__about .__hero-section h2 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 800;
   margin: 2.5rem 0;
   color: #12225b;
+  font-family: "Playfair Display", serif;
   text-align: center;
 }
 .__about .__hero-section p {
-  max-width: 800px;
+  max-width: 900px;
   font-size: 0.9rem;
   margin: 0 auto;
   margin-bottom: 4rem;
   color: #12225b;
   font-weight: 500;
-  line-height: 1.55rem;
+  line-height: 1.3rem;
 }
 .__about .__title {
   padding: 2.5rem;
@@ -255,7 +275,6 @@ body {
   border-radius: 0.6rem;
 }
 .__about .__list-person .row img:hover {
-  transform: scale(0.9);
   opacity: 0.8;
 }
 .__about .__list-person .row h3 {
@@ -270,9 +289,30 @@ body {
   font-weight: 500;
 }
 
+/**__Achieve**/
+.__achieve {
+  /**__hero-section**/
+}
+.__achieve .__hero-section {
+  width: 100%;
+  min-height: 20vh;
+  position: relative;
+  background-color: #12225b;
+  padding: 1rem 2rem;
+}
+.__achieve .__hero-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 2.5rem 0;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
 /**__Footer**/
 .__footer {
-  background-color: #121217;
+  background-color: #12225b;
+  background-image: url("../images/blue-banner.jpg");
   color: #fff;
   padding: 5rem 1rem;
 }
@@ -288,7 +328,7 @@ body {
 }
 .__footer a:hover,
 .__footer span:hover {
-  color: #12225b;
+  color: #3498db;
 }
 .__footer .container:first-child {
   padding-bottom: 3rem;
@@ -299,6 +339,17 @@ body {
 .__footer .container:first-child a,
 .__footer .container:first-child span {
   margin-bottom: 0.5rem;
+}
+.__footer .container:last-child .row > div:nth-child(2) a {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+}
+.__footer .container:last-child .row > div:nth-child(2) a img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin-right: 1rem;
 }
 
 /**__Legal**/
@@ -313,7 +364,7 @@ body {
 /**__Media-Queries**/
 @media (max-width: 1200px) {
   .__home .__hero-section h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .__home .__hero-section p {
     font-size: 0.8rem;
@@ -334,7 +385,7 @@ body {
     padding: 0 1rem;
   }
   .__home .__hero-section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .__home .__hero-section p {
     font-size: 0.9rem;
@@ -348,13 +399,25 @@ body {
   .__home .__hero-section .vector2 {
     display: none;
   }
+  .__footer .container:last-child .row > div:nth-child(2) {
+    text-align: left !important;
+  }
 }
 @media (max-width: 768px) {
   .__navbar {
-    height: 60px;
+    height: 55px;
   }
   .__navbar .navbar-brand img {
     width: 120px;
+  }
+  .__about .__hero-section h2 {
+    font-size: 3rem;
+  }
+  .__about .__list-person .row img {
+    width: 70%;
+  }
+  .__about .__list-person .row h3 {
+    font-size: 1.4rem;
   }
 }
 /**__Search-page**/

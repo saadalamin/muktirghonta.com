@@ -6,8 +6,8 @@
     transition-delay: .3s;
     -webkit-transition: .4s;
     -o-transition: .4s;
-    transition: all .4s, opacity 1.4s;
-    opacity: 0;
+    opacity: 0.3;
+    transition: all .4s, opacity 1s;
 }
 .tile.inView {
     opacity: 1;
