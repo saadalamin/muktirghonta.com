@@ -1,7 +1,7 @@
 // File: index.js
 
 /*
-Home Section Interaction
+Home Page Interaction
 -
 @ Search box toggle
 @ Animation on Scroll
@@ -24,7 +24,9 @@ searchBox.innerHTML = `<div class="modal fade" id="searchPage" tabindex="-1"><di
             <div class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             </div>
-            <div class="search-results"></div>
+            <div class="search-results">
+                <p class="text-muted ps-2">No Results</p>
+            </div>
         </div>
     </div>
 </div></div>
@@ -46,10 +48,11 @@ let algoliaSearchResults = document.querySelectorAll(
 
 algoliaSearchInput.addEventListener("keyup", function () {
  if (algoliaSearchInput.value.length > 0) {
+  algoliaSearchResults.innerHTML = `<p class="text-muted ps-2">Searching...</p>`;
   algoliaSearchIndex.search(algoliaSearchInput.value).then(({ hits }) => {
    let searchResults = hits.map(
-    (hit) => `<a href="${
-     typeof hit.url === "undefined" ? "#" : hit.url
+    (hit) => `<hr/><a href="${
+     typeof hit.link === "undefined" ? "#" : hit.link
     }" class="search-result">
                  <div class="search-result-title">${hit.title}</div>
                  <div class="search-result-content">${hit.description}</div>
@@ -84,6 +87,32 @@ window.addEventListener("scroll", function () {
 });
 
 //////////////////////////////////
+
+
+/*
+About Page Interaction
+-
+@ FadeIn on Scroll
+-
+*/
+
+let elementsArray = document.querySelectorAll(".tile");
+window.addEventListener('scroll', fadeIn); 
+function fadeIn() {
+    for (var i = 0; i < elementsArray.length; i++) {
+        var elem = elementsArray[i]
+        var distInView = elem.getBoundingClientRect().top - window.innerHeight;
+        if (distInView < 0) {
+            elem.classList.add("inView");
+        } else {
+            elem.classList.remove("inView");
+        }
+    }
+}
+fadeIn();
+
+
+/////////////////////////////////
 
 /*
 Footer Section Interaction
