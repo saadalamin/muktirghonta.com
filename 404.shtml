@@ -6,8 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Page not found &middot; Muktir Ghonta</title>
-    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        /**__Navigation-Bar**/
+        .__navbar {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            height: 60px;
+            user-select: none;
+            z-index: 1000;
+        }
+
+        .__navbar .__left,
+        .__navbar .__right {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .__navbar .__menu-btn {
+            margin-left: 1rem;
+        }
+
+        .__navbar .navbar-brand img {
+            width: 150px;
+            height: 100%;
+            object-fit: cover;
+            padding: 0 1.2rem;
+        }
+
+        .__navbar .__right {
+            padding-right: 1rem;
+        }
+
+        .__navbar .__right .__menu-2 a {
+            color: #333;
+            font-size: 0.8rem;
+            text-decoration: none;
+            font-weight: 400;
+            margin: 0 0.8rem;
+        }
+
+        .__navbar .__right .__menu-2 a.active {
+            font-weight: 700;
+        }
+
+        .__navbar .__right .__menu-2 a:hover {
+            color: rgba(51, 51, 51, 0.5);
+        }
+
+        .__menu-1 {
+            padding-top: 1rem;
+            user-select: none;
+        }
+
+        .__menu-1 .btn-close {
+            margin-left: auto;
+            margin-right: 1rem;
+            padding: 1rem;
+        }
+
+        .__menu-1 a {
+            width: fit-content;
+            color: #333;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: 400;
+            margin: 0.5rem 1.8rem;
+            border-bottom: 1px dashed transparent;
+        }
+
+        .__menu-1 a.active {
+            font-weight: 700;
+        }
+
+        .__menu-1 a:hover {
+            border-bottom: 1px solid #333;
+        }
+
+        /**__404-page **/
+        .__404-page {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 50px auto 40px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .__404-page a {
+            color: #4183c4;
+            text-decoration: none;
+        }
+
+        .__404-page a:hover {
+            text-decoration: underline;
+        }
+
+        .__404-page h1 {
+            letter-spacing: -1px;
+            line-height: 60px;
+            font-size: 60px;
+            font-weight: 100;
+            margin: 0px 0 50px 0;
+            text-shadow: 0 1px 0 #fff;
+        }
+
+        .__404-page p {
+            color: rgba(0, 0, 0, 0.5);
+            margin: 20px 10px;
+            line-height: 1.6;
+        }
+
+        .__404-page ul {
+            list-style: none;
+            margin: 25px 0;
+            padding: 0;
+        }
+
+        .__404-page li {
+            display: table-cell;
+            font-weight: bold;
+            width: 1%;
+        }
+
+        .__404-page .logo {
+            display: inline-block;
+            margin-top: 35px;
+        }
+
+        .__404-page .logo-img-2x {
+            display: none;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+            .__404-page .logo-img-1x {
+                display: none;
+            }
+
+            .__404-page .logo-img-2x {
+                display: inline-block;
+            }
+        }
+
+        .__404-page #suggestions {
+            margin-top: 35px;
+            color: #ccc;
+        }
+
+        .__404-page #suggestions a {
+            color: #666666;
+            font-weight: 200;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,18 +179,18 @@
                 </svg>
             </div>
             <div class="navbar-brand">
-                <a href="index.html"><img src="assets/images/logo.png" alt="Muktir Ghonta"></a>
+                <a href="https://muktirghonta.com/index.html"><img src="assets/images/logo.png" alt="Muktir Ghonta"></a>
             </div>
         </div>
         <div class="__right">
             <div class="__menu-2 d-none d-lg-block">
                 <div class="d-flex">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="achieve.html">Achievements</a>
-                    <a href="updates.html">Updates</a>
-                    <a href="blogs.html">Blogs</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="https://muktirghonta.com/index.html">Home</a>
+                    <a href="https://muktirghonta.com/about.html">About Us</a>
+                    <a href="https://muktirghonta.com/achieve.html">Achievements</a>
+                    <a href="https://muktirghonta.com/updates.html">Updates</a>
+                    <a href="https://muktirghonta.com/wisdom.html">Wisdom</a>
+                    <a href="https://muktirghonta.com/contact.html">Contact Us</a>
                 </div>
             </div>
             <div class="__search-btn btn-round-effect" data-bs-toggle="modal" data-bs-target="#searchPage">
@@ -49,12 +206,12 @@
         <div class="btn-close btn-round-effect" data-bs-toggle="offcanvas" data-bs-target="#menuPage">
         </div>
         <div class="d-flex flex-column">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="achieve.html">Achievements</a>
-            <a href="updates.html">Updates</a>
-            <a href="blogs.html">Blogs</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="https://muktirghonta.com/index.html">Home</a>
+            <a href="https://muktirghonta.com/about.html">About Us</a>
+            <a href="https://muktirghonta.com/achieve.html">Achievements</a>
+            <a href="https://muktirghonta.com/updates.html">Updates</a>
+            <a href="https://muktirghonta.com/wisdom.html">Wisdom</a>
+            <a href="https://muktirghonta.com/contact.html">Contact Us</a>
         </div>
     </div>
 
@@ -66,22 +223,22 @@
 
         <p>
             If you're sure the address is correct, try checking your spelling or
-            <a href="index.html">return to the home page</a>. If you're not sure what happened, try waiting a few
+            <a href="https://muktirghonta.com/index.html">return to the home page</a>. If you're not sure what happened, try waiting a few
             minutes and reloading the page. Because it can sometimes takes a few
             minutes for a newly pushed site to propagate to servers worldwide.
         </p>
 
         <div id="suggestions">
-            <a href="index.html">Home page</a> &mdash;
-            <a href="about.html">About Us</a>
+            <a href="https://muktirghonta.com/index.html">Home page</a> &mdash;
+            <a href="https://muktirghonta.com/about.html">About Us</a>
         </div>
 
         <a href="/" class="logo logo-img-1x">
-            <img height="32" title="" alt="" src="assets/images/logo.png">
+            <img height="32" title="" alt="" src="https://muktirghonta.com/assets/images/logo.png">
         </a>
 
         <a href="/" class="logo logo-img-2x">
-            <img height="32" title="" alt="" src="assets/images/logo.png">
+            <img height="32" title="" alt="" src="https://muktirghonta.com/assets/images/logo.png">
         </a>
     </div>
 </body>

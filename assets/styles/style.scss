@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght&family=Playfair+Display:wght@700@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
 
 $primary-color: #f5f5f5;
 $primary-text-color: #333;
@@ -21,13 +21,13 @@ body::-webkit-scrollbar-thumb {
 
 * {
  box-sizing: border-box;
- font-family: "Montserrat", sans-serif;
 }
 
 body {
  background-color: $primary-color;
  color: $primary-text-color;
  scroll-behavior: smooth;
+ font-family: "Montserrat", sans-serif;
 }
 
 /**__Common-Styles**/
@@ -93,7 +93,7 @@ body {
   .__menu-2 {
    a {
     color: $primary-text-color;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-decoration: none;
     font-weight: 400;
     margin: 0 0.8rem;
@@ -131,6 +131,7 @@ body {
   }
  }
 }
+
 /////////////////////
 /**__Home**/
 .__home {
@@ -270,8 +271,10 @@ body {
   width: 100%;
   background-color: #fff;
   padding: 2rem 1rem;
+  padding-bottom: 6rem;
   .row {
    text-align: center;
+   justify-content: center;
    img {
     width: 90%;
     object-fit: cover;
@@ -296,29 +299,152 @@ body {
  }
 }
 /**__Achieve**/
-.__achieve {
+.__achieve,
+.__updates {
  /**__hero-section**/
  .__hero-section {
   width: 100%;
-  min-height: 20vh;
+  min-height: 30vh;
   position: relative;
   background-color: $secondary-color;
+  background-image: url("../images/blue-banner-blur.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   padding: 1rem 2rem;
+  display: flex;
   h2 {
    font-size: 2.2rem;
    font-weight: 800;
-   margin: 2.5rem 0;
+   margin: 2.5rem auto;
    color: $secondary-text-color;
    font-family: "Playfair Display", serif;
-   text-align: center;
+   align-self: center;
+  }
+ }
+ /**__list-section**/
+ .__list-achieve,
+ .__list-updates {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  padding-bottom: 6rem;
+  .row {
+   justify-content: center;
+   img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    border-radius: 0.3rem;
+    &:hover {
+     opacity: 0.8;
+    }
+   }
+   h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: "PT Sans", sans-serif;
+    margin-top: 0.8rem;
+   }
+   p {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: rgba($primary-text-color, 0.8);
+   }
+   a {
+    color: $secondary-color;
+    font-size: 0.8rem;
+    font-weight: 500;
+    &:hover {
+     color: rgba($secondary-color, 0.5);
+    }
+   }
+  }
+ }
+}
+/**__Wisdom**/
+.__wisdom {
+ background-color: $secondary-color;
+ background-image: url("../images/blue-banner-blur.jpg");
+ background-size: cover;
+ background-attachment: fixed;
+ .__blog-section iframe{
+    background-color: $primary-text-color;
+ }
+}
+
+/**__Contact**/
+.__contact {
+ /**__hero-section**/
+ .__hero-section {
+  width: 100%;
+  min-height: 30vh;
+  position: relative;
+  background-color: $secondary-color;
+  background-image: url("../images/blue-banner-blur.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 1rem 2rem;
+  display: flex;
+  h2 {
+   font-size: 2.2rem;
+   font-weight: 800;
+   margin: 2.5rem auto;
+   color: $secondary-text-color;
+   font-family: "Playfair Display", serif;
+   align-self: center;
+  }
+ }
+ /**__form-section**/
+ .__form-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  padding-bottom: 6rem;
+  .row {
+   justify-content: center;
+   .form-group {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    input,
+    textarea {
+     width: 100%;
+     padding: 0.5rem 1rem;
+     border: 1px solid rgba($primary-text-color, 0.5);
+     border-radius: 5px;
+     font-size: 0.9rem;
+     font-weight: 500;
+     &:focus {
+      outline: none;
+      border-color: $secondary-color;
+     }
+    }
+    textarea {
+     resize: none;
+     height: 150px;
+    }
+   }
+   .btn {
+    width: fit-content;
+    @include btnEffect(#3498db, $secondary-text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    &:hover {
+     background-color: rgba(#3498db, 0.7);
+    }
+   }
   }
  }
 }
 /////////////////////
+
 /**__Footer**/
 .__footer {
  background-color: $secondary-color;
- background-image: url("../images/blue-banner.jpg");
+ background-image: url("../images/blue-banner-blur.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
  color: $last-text-color;
  padding: 5rem 1rem;
  p {
@@ -415,6 +541,12 @@ body {
     display: none;
    }
   }
+ }
+ .__wisdom{
+    .__blog-section{
+        padding: 0 !important;
+        margin-top: -2.5rem;
+    }
  }
  .__footer {
   .container:last-child {

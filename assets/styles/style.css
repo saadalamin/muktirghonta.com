@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght&family=Playfair+Display:wght@700@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
 /*** SCROLLBAR ***/
 body::-webkit-scrollbar {
   width: 0.3em;
@@ -15,13 +15,13 @@ body::-webkit-scrollbar-thumb {
 
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 body {
   background-color: #f5f5f5;
   color: #333;
   scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
 }
 
 /**__Common-Styles**/
@@ -73,7 +73,7 @@ body {
 }
 .__navbar .__right .__menu-2 a {
   color: #333;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
   font-weight: 400;
   margin: 0 0.8rem;
@@ -264,9 +264,11 @@ body {
   width: 100%;
   background-color: #fff;
   padding: 2rem 1rem;
+  padding-bottom: 6rem;
 }
 .__about .__list-person .row {
   text-align: center;
+  justify-content: center;
 }
 .__about .__list-person .row img {
   width: 90%;
@@ -290,29 +292,192 @@ body {
 }
 
 /**__Achieve**/
-.__achieve {
+.__achieve,
+.__updates {
   /**__hero-section**/
+  /**__list-section**/
 }
-.__achieve .__hero-section {
+.__achieve .__hero-section,
+.__updates .__hero-section {
   width: 100%;
-  min-height: 20vh;
+  min-height: 30vh;
   position: relative;
   background-color: #12225b;
+  background-image: url("../images/blue-banner-blur.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   padding: 1rem 2rem;
+  display: flex;
 }
-.__achieve .__hero-section h2 {
+.__achieve .__hero-section h2,
+.__updates .__hero-section h2 {
   font-size: 2.2rem;
   font-weight: 800;
-  margin: 2.5rem 0;
+  margin: 2.5rem auto;
   color: #fff;
   font-family: "Playfair Display", serif;
-  text-align: center;
+  align-self: center;
+}
+.__achieve .__list-achieve,
+.__achieve .__list-updates,
+.__updates .__list-achieve,
+.__updates .__list-updates {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  padding-bottom: 6rem;
+}
+.__achieve .__list-achieve .row,
+.__achieve .__list-updates .row,
+.__updates .__list-achieve .row,
+.__updates .__list-updates .row {
+  justify-content: center;
+}
+.__achieve .__list-achieve .row img,
+.__achieve .__list-updates .row img,
+.__updates .__list-achieve .row img,
+.__updates .__list-updates .row img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+  border-radius: 0.3rem;
+}
+.__achieve .__list-achieve .row img:hover,
+.__achieve .__list-updates .row img:hover,
+.__updates .__list-achieve .row img:hover,
+.__updates .__list-updates .row img:hover {
+  opacity: 0.8;
+}
+.__achieve .__list-achieve .row h3,
+.__achieve .__list-updates .row h3,
+.__updates .__list-achieve .row h3,
+.__updates .__list-updates .row h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "PT Sans", sans-serif;
+  margin-top: 0.8rem;
+}
+.__achieve .__list-achieve .row p,
+.__achieve .__list-updates .row p,
+.__updates .__list-achieve .row p,
+.__updates .__list-updates .row p {
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: rgba(51, 51, 51, 0.8);
+}
+.__achieve .__list-achieve .row a,
+.__achieve .__list-updates .row a,
+.__updates .__list-achieve .row a,
+.__updates .__list-updates .row a {
+  color: #12225b;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.__achieve .__list-achieve .row a:hover,
+.__achieve .__list-updates .row a:hover,
+.__updates .__list-achieve .row a:hover,
+.__updates .__list-updates .row a:hover {
+  color: rgba(18, 34, 91, 0.5);
+}
+
+/**__Wisdom**/
+.__wisdom {
+  background-color: #12225b;
+  background-image: url("../images/blue-banner-blur.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.__wisdom .__blog-section iframe {
+  background-color: #333;
+}
+
+/**__Contact**/
+.__contact {
+  /**__hero-section**/
+  /**__form-section**/
+}
+.__contact .__hero-section {
+  width: 100%;
+  min-height: 30vh;
+  position: relative;
+  background-color: #12225b;
+  background-image: url("../images/blue-banner-blur.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 1rem 2rem;
+  display: flex;
+}
+.__contact .__hero-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 2.5rem auto;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  align-self: center;
+}
+.__contact .__form-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  padding-bottom: 6rem;
+}
+.__contact .__form-section .row {
+  justify-content: center;
+}
+.__contact .__form-section .row .form-group {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+.__contact .__form-section .row .form-group input,
+.__contact .__form-section .row .form-group textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.__contact .__form-section .row .form-group input:focus,
+.__contact .__form-section .row .form-group textarea:focus {
+  outline: none;
+  border-color: #12225b;
+}
+.__contact .__form-section .row .form-group textarea {
+  resize: none;
+  height: 150px;
+}
+.__contact .__form-section .row .btn {
+  width: fit-content;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  transition: transform 0.1s ease-in-out, background-color 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.__contact .__form-section .row .btn svg {
+  fill: #333;
+}
+.__contact .__form-section .row .btn:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+}
+.__contact .__form-section .row .btn:active {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+.__contact .__form-section .row .btn:hover {
+  background-color: rgba(52, 152, 219, 0.7);
 }
 
 /**__Footer**/
 .__footer {
   background-color: #12225b;
-  background-image: url("../images/blue-banner.jpg");
+  background-image: url("../images/blue-banner-blur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
   padding: 5rem 1rem;
 }
@@ -398,6 +563,10 @@ body {
   }
   .__home .__hero-section .vector2 {
     display: none;
+  }
+  .__wisdom .__blog-section {
+    padding: 0 !important;
+    margin-top: -2.5rem;
   }
   .__footer .container:last-child .row > div:nth-child(2) {
     text-align: left !important;
