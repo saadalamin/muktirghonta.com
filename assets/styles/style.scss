@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700;800&family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
 
 $primary-color: #f5f5f5;
 $primary-text-color: #333;
@@ -27,7 +27,7 @@ body {
  background-color: $primary-color;
  color: $primary-text-color;
  scroll-behavior: smooth;
- font-family: "Montserrat", sans-serif;
+ font-family: "Ubuntu", sans-serif;
 }
 
 /**__Common-Styles**/
@@ -93,7 +93,7 @@ body {
   .__menu-2 {
    a {
     color: $primary-text-color;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-decoration: none;
     font-weight: 400;
     margin: 0 0.8rem;
@@ -138,7 +138,7 @@ body {
  /**__hero-section**/
  .__hero-section {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -160,22 +160,43 @@ body {
    border-radius: 0.6rem;
    transition: padding 0.2s ease-in-out;
   }
+  span {
+   display: block;
+   color: #28af34;
+   font-size: 0.85rem;
+   font-weight: 500;
+   position: relative;
+   padding: 0px 40px;
+   margin-bottom: 1.5rem;
+   &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 35px;
+    height: 1px;
+    background-color: #28af34;
+    margin-top: 0.5rem;
+   }
+  }
   h2 {
    font-size: 3.5rem;
    font-weight: 800;
    margin-bottom: 1.5rem;
    color: $secondary-color;
+   font-family: "Montserrat", serif;
   }
   p {
    font-size: 1rem;
    font-weight: 500;
-   line-height: 2rem;
+   line-height: 1.7rem;
    margin-bottom: 1.5rem;
   }
   .btn {
    width: fit-content;
    @include btnEffect(#3498db, $secondary-text-color);
-   font-size: 1rem;
+   font-size: 0.8rem;
    font-weight: 500;
    &:hover {
     background-color: rgba(#3498db, 0.7);
@@ -213,6 +234,42 @@ body {
    background-image: url("../images/vector2.png");
    background-size: cover;
    opacity: 0.5;
+  }
+ }
+ .__one-section {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  span {
+   color: #28af34;
+   font-size: 0.85rem;
+   font-weight: 500;
+   position: relative;
+   padding-right: 40px;
+   margin-bottom: 1.5rem;
+   &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 35px;
+    height: 1px;
+    background-color: #28af34;
+    margin-top: 0.5rem;
+   }
+  }
+  h2 {
+   font-size: 2.5rem;
+   font-weight: 800;
+   margin-bottom: 1.5rem;
+  }
+  p {
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: 1.7rem;
+   margin-bottom: 1.5rem;
   }
  }
 }
@@ -368,11 +425,10 @@ body {
  background-image: url("../images/blue-banner-blur.jpg");
  background-size: cover;
  background-attachment: fixed;
- .__blog-section iframe{
-    background-color: $primary-text-color;
+ .__blog-section iframe {
+  background-color: $primary-text-color;
  }
 }
-
 /**__Contact**/
 .__contact {
  /**__hero-section**/
@@ -441,10 +497,7 @@ body {
 
 /**__Footer**/
 .__footer {
- background-color: $secondary-color;
- background-image: url("../images/blue-banner-blur.jpg");
- background-repeat: no-repeat;
- background-size: cover;
+ background-color: rgba($last-color, 0.9);
  color: $last-text-color;
  padding: 5rem 1rem;
  p {
@@ -456,8 +509,9 @@ body {
  span {
   color: $last-text-color;
   font-size: 0.85rem;
+  text-decoration: none;
   &:hover {
-   color: #3498db;
+   text-decoration: underline;
   }
  }
  .container:first-child {
@@ -528,6 +582,19 @@ body {
    h2 {
     font-size: 2.5rem;
    }
+   span {
+    &::before {
+     content: "";
+     display: block;
+     position: absolute;
+     top: 1px;
+     right: 0;
+     width: 35px;
+     height: 1px;
+     background-color: #28af34;
+     margin-top: 0.5rem;
+    }
+   }
    p {
     font-size: 0.9rem;
    }
@@ -542,11 +609,11 @@ body {
    }
   }
  }
- .__wisdom{
-    .__blog-section{
-        padding: 0 !important;
-        margin-top: -2.5rem;
-    }
+ .__wisdom {
+  .__blog-section {
+   padding: 0 !important;
+   margin-top: -2.5rem;
+  }
  }
  .__footer {
   .container:last-child {
