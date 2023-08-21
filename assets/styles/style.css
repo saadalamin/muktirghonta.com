@@ -162,7 +162,7 @@ body {
 .__home .__hero-section h2 {
   font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: #12225b;
   font-family: "Montserrat", serif;
 }
@@ -170,7 +170,7 @@ body {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.7rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .__home .__hero-section .btn {
   width: fit-content;
@@ -235,12 +235,13 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .__home .__one-section span {
+  display: inline-block;
   color: #28af34;
   font-size: 0.85rem;
   font-weight: 500;
   position: relative;
   padding-right: 40px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
 .__home .__one-section span::after {
   content: "";
