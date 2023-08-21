@@ -230,7 +230,7 @@ body {
 }
 .__home .__one-section {
   width: 100%;
-  padding: 5rem 0;
+  padding: 5rem 1.5rem;
   background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -263,6 +263,46 @@ body {
   font-weight: 500;
   line-height: 1.7rem;
   margin-bottom: 1.5rem;
+}
+.__home .__one-section .__areas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.__home .__one-section .__areas .__area {
+  text-align: center;
+  padding: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+.__home .__one-section .__areas .__area:hover {
+  color: #28af34;
+}
+.__home .__one-section .__areas .__area img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 100rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+.__home .__one-section .__areas .__area img:hover {
+  transform: scale(1.1);
+  border-color: #28af34;
+  border-width: 2px;
+}
+.__home .__one-section .__areas .__area h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.__home .__one-section .__areas .__area p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 /**__About**/

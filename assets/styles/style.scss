@@ -238,7 +238,7 @@ body {
  }
  .__one-section {
   width: 100%;
-  padding: 5rem 0;
+  padding: 5rem 1.5rem;
   background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   span {
@@ -270,6 +270,46 @@ body {
    font-weight: 500;
    line-height: 1.7rem;
    margin-bottom: 1.5rem;
+  }
+  .__areas {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 3rem 0;
+   .__area {
+    text-align: center;
+    padding: 0.5rem;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: #28af34;
+     }
+    img {
+     width: 100%;
+     object-fit: cover;
+     aspect-ratio: 1/1;
+     border-radius: 100rem;
+     border: 1px solid rgba(0, 0, 0, 0.3);
+     padding: 0.5rem;
+     margin-bottom: 1rem;
+     transition: transform 0.2s ease-in-out;
+     &:hover {
+      transform: scale(1.1);
+      border-color: #28af34;
+      border-width: 2px;
+     }
+    }
+    h4 {
+     font-size: 1.2rem;
+     font-weight: 700;
+     margin-bottom: 0.5rem;
+     text-transform: uppercase;
+    }
+    p {
+     font-size: 0.9rem;
+     font-weight: 500;
+     margin-bottom: 0.5rem;
+    }
+   }
   }
  }
 }
