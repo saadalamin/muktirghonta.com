@@ -64,6 +64,11 @@ body {
  border: 0;
 }
 
+input:hover,input:focus,textarea:hover,textarea:focus{
+    box-shadow: none !important;
+    border-width: 1.5px;
+}
+
 /**__Navigation-Bar**/
 .__navbar {
  background-color: white;
@@ -381,6 +386,7 @@ body {
    margin: 4rem 0;
    .row {
     justify-content: center;
+    width: 100%;
    }
    img {
     width: 100%;
