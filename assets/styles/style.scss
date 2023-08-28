@@ -1,13 +1,40 @@
+/*
+Developed & Designed by Mohammad Sefatullah
+https://github.com/mosefatullah
+https://www.linkedin.com/in/mosefatullah/
+*/
+
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. Font & Reset css
+02. Global styles
+03. Navigation bar
+04. Home
+05. About
+06. Achieve
+07. Wisdom
+08. Contact
+09. Footer
+10. Legal
+11. Media Queries
+12. Search Page
+13. 404 Page
+--------------------------------------------- */
+/* 
+---------------------------------------------
+Font & Reset css
+--------------------------------------------- 
+*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700;800&family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
 
-$primary-color: #f5f5f5;
+$primary-color: #12225b;
 $primary-text-color: #333;
-$secondary-color: #12225b;
+$secondary-color: #1b76b3;
 $secondary-text-color: #fff;
 $last-color: #121217;
 $last-text-color: #fff;
 
-/*** SCROLLBAR ***/
 body::-webkit-scrollbar {
  width: 0.3em;
  background-color: rgba(255, 255, 255, 0.2);
@@ -19,18 +46,36 @@ body::-webkit-scrollbar-thumb {
  background-color: #708090;
 }
 
+::selection,
+::-moz-selection,
+::-webkit-selection {
+ background-color: #1b76b3;
+ color: #fff;
+}
+
 * {
  box-sizing: border-box;
 }
 
 body {
- background-color: $primary-color;
+ background-color: #f5f5f5;
  color: $primary-text-color;
  scroll-behavior: smooth;
- font-family: "Ubuntu", sans-serif;
 }
 
-/**__Common-Styles**/
+html,
+body {
+ font-family: "Ubuntu", sans-serif;
+ -ms-text-size-adjust: 100%;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+/* 
+---------------------------------------------
+Global styles
+--------------------------------------------- 
+*/
 @mixin btnEffect(
  $bg: transparent,
  $color: $primary-text-color,
@@ -64,81 +109,117 @@ body {
  border: 0;
 }
 
-input:hover,input:focus,textarea:hover,textarea:focus{
-    box-shadow: none !important;
-    border-width: 1.5px;
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+ box-shadow: none !important;
+ border-width: 1.5px;
 }
 
-/**__Navigation-Bar**/
+/* 
+---------------------------------------------
+Navigation bar
+--------------------------------------------- 
+*/
 .__navbar {
- background-color: white;
- box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
- height: 60px;
+ background-color: $primary-color;
+ height: 65px;
  user-select: none;
  z-index: 1000;
+ transition: background-color 0.2s ease-in-out;
+ &.scrolled {
+  background-color: white;
+  background-image: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  .__left,
+  .__right {
+   svg {
+    fill: $primary-text-color;
+   }
+  }
+  .__right .__menu-2 {
+   a {
+    color: $primary-text-color;
+    &.active {
+     background-color: rgba($primary-color, 0.2);
+    }
+   }
+  }
+ }
  .__left,
  .__right {
   display: flex;
   align-items: center;
   height: 100%;
+  svg {
+   fill: #fff;
+  }
  }
  .__menu-btn {
   margin-left: 1rem;
  }
  .navbar-brand {
   img {
-   width: 150px;
+   width: 140px;
    height: 100%;
    object-fit: cover;
-   padding: 0 1.2rem;
+   padding: 0rem 1.2rem;
   }
  }
  .__right {
   padding-right: 1rem;
   .__menu-2 {
+   margin-right: 1rem;
    a {
-    color: $primary-text-color;
+    color: $secondary-text-color;
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: 400;
-    margin: 0 0.8rem;
+    margin: 0 0.5rem;
+    padding: 0.1rem 1rem;
+    border-radius: 100rem;
     &.active {
-     font-weight: 700;
+     background-color: rgba(255, 255, 255, 0.2);
     }
     &:hover {
-     color: rgba($primary-text-color, 0.5);
+     color: rgba($secondary-text-color, 0.5);
     }
    }
   }
  }
-}
-.__menu-1 {
- padding-top: 1rem;
- user-select: none;
- .btn-close {
-  margin-left: auto;
-  margin-right: 1rem;
-  padding: 1rem;
- }
- a {
-  width: fit-content;
-  color: $primary-text-color;
-  font-size: 1rem;
-  text-decoration: none;
-  font-weight: 400;
-  margin: 0.5rem 1.8rem;
-  border-bottom: 1px dashed transparent;
-  &.active {
-   font-weight: 700;
+ .__menu-1 {
+  padding-top: 1rem;
+  user-select: none;
+  .btn-close {
+   margin-left: auto;
+   margin-right: 1rem;
+   padding: 1rem;
   }
-  &:hover {
-   border-bottom: 1px solid $primary-text-color;
+  a {
+   width: fit-content;
+   color: $primary-text-color;
+   font-size: 1rem;
+   text-decoration: none;
+   font-weight: 400;
+   margin: 0.5rem 1.8rem;
+   border-bottom: 1px dashed transparent;
+   &.active {
+    font-weight: 700;
+   }
+   &:hover {
+    border-bottom: 1px solid $primary-text-color;
+   }
   }
  }
 }
 
 /////////////////////
-/**__Home**/
+/* 
+---------------------------------------------
+Home
+--------------------------------------------- 
+*/
 .__home {
  /**__hero-section**/
  .__hero-section {
@@ -147,16 +228,31 @@ input:hover,input:focus,textarea:hover,textarea:focus{
   position: relative;
   display: flex;
   justify-content: center;
-  background-image: url("../images/white-banner.jpg");
+  background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: repeat;
   background-attachment: fixed;
   padding: 10rem 0;
+  color: $secondary-text-color;
   .row > div:last-child {
    display: flex;
    flex-direction: column;
    justify-content: center;
+  }
+  .row > div {
+   position: relative;
+  }
+  .img-overlay {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 50px;
+   left: -50px;
+   background-color: rgba(206, 206, 206, 0.1);
+   backdrop-filter: blur(5px);
+   border-radius: 0.6rem;
+   z-index: -1;
   }
   img {
    width: 100%;
@@ -164,6 +260,7 @@ input:hover,input:focus,textarea:hover,textarea:focus{
    aspect-ratio: 3/3;
    border-radius: 0.6rem;
    transition: padding 0.2s ease-in-out;
+   border: 6px solid rgba(255, 255, 255, 0.2);
   }
   span {
    display: block;
@@ -189,12 +286,12 @@ input:hover,input:focus,textarea:hover,textarea:focus{
    font-size: 3.5rem;
    font-weight: 800;
    margin-bottom: 2rem;
-   color: $secondary-color;
+   color: $secondary-text-color;
    font-family: "Montserrat", serif;
   }
   p {
    font-size: 1rem;
-   font-weight: 500;
+   font-weight: 400;
    line-height: 1.7rem;
    margin-bottom: 2rem;
   }
@@ -288,12 +385,12 @@ input:hover,input:focus,textarea:hover,textarea:focus{
      color: #28af34;
     }
     img {
-     width: 100%;
+     width: 55%;
      object-fit: cover;
      aspect-ratio: 1/1;
-     border-radius: 100rem;
-     border: 1px solid rgba(0, 0, 0, 0.3);
-     padding: 0.5rem;
+     border-radius: 0.4rem;
+     border: 2px solid rgba(0, 0, 0, 0.2);
+     padding: 0.3rem;
      margin-bottom: 1rem;
      transition: transform 0.2s ease-in-out;
      &:hover {
@@ -305,20 +402,20 @@ input:hover,input:focus,textarea:hover,textarea:focus{
     h4 {
      font-size: 0.7rem;
      font-weight: 700;
-     margin-bottom: 0.5rem;
+     margin: 0.8rem 0;
      text-transform: uppercase;
     }
     p {
-     font-size: 0.9rem;
-     font-weight: 500;
-     margin-bottom: 0.5rem;
+     font-size: 0.7rem;
+     font-weight: 400;
+     line-height: 1rem;
     }
    }
   }
  }
  /**__two-section**/
  .__two-section {
-  .container {
+  .container-md {
    padding: 0 2rem;
    padding-top: 5rem;
    span {
@@ -372,7 +469,7 @@ input:hover,input:focus,textarea:hover,textarea:focus{
      margin-bottom: 0;
     }
     p {
-     font-size: 1rem;
+     font-size: 0.8rem;
      font-weight: 500;
     }
    }
@@ -381,12 +478,18 @@ input:hover,input:focus,textarea:hover,textarea:focus{
      background-image: linear-gradient(60deg, #0229a2 0%, #8381f2 100%);
     }
    }
+   .__item.m{
+    div{
+        background-image: linear-gradient(60deg, #B24968 0%, #4285F4 100%);
+    }
+   }
   }
   .teams-group {
    margin: 4rem 0;
    .row {
     justify-content: center;
     width: 100%;
+    margin: 0;
    }
    img {
     width: 100%;
@@ -403,7 +506,7 @@ input:hover,input:focus,textarea:hover,textarea:focus{
     margin-top: 1.5rem;
    }
    .carousel-inner {
-    background-color: $secondary-color;
+    background-color: $secondary-text-color;
     .carousel-item {
      img {
       display: block;
@@ -415,28 +518,57 @@ input:hover,input:focus,textarea:hover,textarea:focus{
      }
     }
    }
+   .carousel-control-prev-icon,
+   .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100rem;
+    background-image: none;
+    padding: 8px;
+    width: 45px;
+    height: 45px;
+    transition: background-color 0.3s ease;
+   }
+
+   .carousel-control-prev-icon::before,
+   .carousel-control-next-icon::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M11 2.5L6 8l5 5.5L9.5 15 2 8 9.5 1 11 2.5z'/%3E%3C/svg%3E");
+    background-size: 100%;
+    background-repeat: no-repeat;
+   }
+   .carousel-control-next-icon::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M5 2.5l5 5.5-5 5.5L6.5 15 14 8 6.5 1 5 2.5z'/%3E%3C/svg%3E");
+   }
   }
  }
 }
-/**__About**/
+/* 
+---------------------------------------------
+About
+--------------------------------------------- 
+*/
 .__about {
  /**__hero-section**/
  .__hero-section {
   width: 100%;
-  min-height: 20vh;
+  height: fit-content;
   position: relative;
   background-color: $primary-color;
-  color: $primary-text-color;
-  background-image: url("../images/white-banner.jpg");
+  color: $secondary-text-color;
+  background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: repeat;
-  padding: 1rem 2rem;
+  padding: 5rem 2rem;
+  margin-bottom: 5rem;
   h2 {
    font-size: 5rem;
    font-weight: 800;
    margin: 2.5rem 0;
-   color: $secondary-color;
+   color: $secondary-text-color;
    font-family: "Playfair Display", serif;
    text-align: center;
   }
@@ -445,7 +577,7 @@ input:hover,input:focus,textarea:hover,textarea:focus{
    font-size: 0.9rem;
    margin: 0 auto;
    margin-bottom: 4rem;
-   color: $secondary-color;
+   color: $secondary-text-color;
    font-weight: 500;
    line-height: 1.3rem;
   }
@@ -453,7 +585,7 @@ input:hover,input:focus,textarea:hover,textarea:focus{
  /**__title-section**/
  .__title {
   padding: 2.5rem;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   color: $secondary-text-color;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
@@ -500,7 +632,11 @@ input:hover,input:focus,textarea:hover,textarea:focus{
   }
  }
 }
-/**__Achieve**/
+/* 
+---------------------------------------------
+Achieve
+--------------------------------------------- 
+*/
 .__achieve,
 .__updates {
  /**__hero-section**/
@@ -564,7 +700,11 @@ input:hover,input:focus,textarea:hover,textarea:focus{
   }
  }
 }
-/**__Wisdom**/
+/* 
+---------------------------------------------
+Wisdom
+--------------------------------------------- 
+*/
 .__wisdom {
  background-color: $secondary-color;
  background-image: url("../images/blue-banner-blur.jpg");
@@ -574,7 +714,11 @@ input:hover,input:focus,textarea:hover,textarea:focus{
   background-color: $primary-text-color;
  }
 }
-/**__Contact**/
+/* 
+---------------------------------------------
+Contact
+--------------------------------------------- 
+*/
 .__contact {
  /**__hero-section**/
  .__hero-section {
@@ -627,20 +771,20 @@ input:hover,input:focus,textarea:hover,textarea:focus{
     }
    }
    .btn {
-    width: fit-content;
-    @include btnEffect(#3498db, $secondary-text-color);
+    width: 100%;
     font-size: 1rem;
     font-weight: 500;
-    &:hover {
-     background-color: rgba(#3498db, 0.7);
-    }
    }
   }
  }
 }
 /////////////////////
 
-/**__Footer**/
+/* 
+---------------------------------------------
+Footer
+--------------------------------------------- 
+*/
 .__footer {
  background-color: rgba($last-color, 0.9);
  color: $last-text-color;
@@ -687,7 +831,11 @@ input:hover,input:focus,textarea:hover,textarea:focus{
  }
 }
 
-/**__Legal**/
+/* 
+---------------------------------------------
+Legal
+--------------------------------------------- 
+*/
 .__legal {
  p {
   white-space: pre-line;
@@ -698,7 +846,11 @@ input:hover,input:focus,textarea:hover,textarea:focus{
  }
 }
 
-/**__Media-Queries**/
+/* 
+---------------------------------------------
+Media Queries
+--------------------------------------------- 
+*/
 @media (max-width: 1200px) {
  .__home {
   .__hero-section {
@@ -722,15 +874,22 @@ input:hover,input:focus,textarea:hover,textarea:focus{
 @media (max-width: 992px) {
  .__home {
   .__hero-section {
-   padding: 2rem 0;
+   padding: 1rem 0;
+   padding-bottom: 6rem;
    .row > div:last-child {
     padding: 0 2rem;
     text-align: center;
     align-items: center;
    }
+   .img-overlay {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+   }
    img {
     aspect-ratio: 16/9;
     padding: 0 1rem;
+    border-width: 2px;
    }
    h2 {
     font-size: 2.5rem;
@@ -804,7 +963,11 @@ input:hover,input:focus,textarea:hover,textarea:focus{
  }
 }
 
-/**__Search-page**/
+/* 
+---------------------------------------------
+Search Page
+--------------------------------------------- 
+*/
 .__search-page {
  .search-results {
   margin-top: 2rem;
@@ -826,7 +989,11 @@ input:hover,input:focus,textarea:hover,textarea:focus{
  }
 }
 
-/**__404-page **/
+/* 
+---------------------------------------------
+404 Page
+--------------------------------------------- 
+*/
 .__404-page {
  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  margin: 50px auto 40px auto;

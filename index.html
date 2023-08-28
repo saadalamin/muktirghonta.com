@@ -54,13 +54,13 @@
         <div class="__left">
             <div class="__menu-btn btn-round-effect d-block d-lg-none" data-bs-toggle="offcanvas"
                 data-bs-target="#menuPage">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
                     <path d="M0 0h24v24H0V0z" fill="none" />
                     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                 </svg>
             </div>
             <div class="navbar-brand">
-                <a href="index.html"><img src="assets/images/logo.png" alt="Muktir Ghonta"></a>
+                <a href="index.html"><img src="assets/images/logo-cut.png" alt="Muktir Ghonta"></a>
             </div>
         </div>
         <div class="__right">
@@ -83,19 +83,19 @@
                 </svg>
             </div>
         </div>
+        <div class="__menu-1 offcanvas offcanvas-start" id="menuPage">
+            <div class="btn-close btn-round-effect" data-bs-toggle="offcanvas" data-bs-target="#menuPage">
+            </div>
+            <div class="d-flex flex-column">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="achieve.html">Achievements</a>
+                <a href="updates.html">Updates</a>
+                <a href="wisdom.html">Wisdom</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
     </nav>
-    <div class="__menu-1 offcanvas offcanvas-start" id="menuPage">
-        <div class="btn-close btn-round-effect" data-bs-toggle="offcanvas" data-bs-target="#menuPage">
-        </div>
-        <div class="d-flex flex-column">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="achieve.html">Achievements</a>
-            <a href="updates.html">Updates</a>
-            <a href="wisdom.html">Wisdom</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-    </div>
 
     <!-- __HOME -------->
     <div class="__home">
@@ -103,8 +103,9 @@
         <div class="__hero-section">
             <div class="container">
                 <div class="row gap-5">
-                    <div class="col-12 col-lg-5">
-                        <img src="assets/images/banner.jpg" alt="Muktir Ghonta" data-tilt>
+                    <div class="col-12 col-lg-5" data-tilt>
+                        <div class="img-overlay"></div>
+                        <img src="assets/images/banner.jpg" alt="Muktir Ghonta">
                     </div>
                     <div class="col-12 col-lg-6">
                         <span>Muktir Ghonta</span>
@@ -138,13 +139,14 @@
                     </div>
                 </div>
                 <div class="__areas">
-                    <div class="row m-0">
+                    <div class="row m-0 gap-xl-4">
                         <div class="col-6 col-md-3 col-xl-2">
                             <div class="__area">
                                 <div class="__icon">
                                     <img src="assets/images/4.jpg" alt="Cinema">
                                 </div>
                                 <h4>Film Production</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda corrupti earum voluptatem eveniet sint numquam reprehenderit, ipsum magnam.</p>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 col-xl-2">
@@ -153,6 +155,7 @@
                                     <img src="assets/images/2.jpg" alt="Music">
                                 </div>
                                 <h4>Festival</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda corrupti earum voluptatem eveniet sint numquam reprehenderit, ipsum magnam.</p>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 col-xl-2">
@@ -161,6 +164,7 @@
                                     <img src="assets/images/1.jpg" alt="Festival">
                                 </div>
                                 <h4>Research</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda corrupti earum voluptatem eveniet sint numquam reprehenderit, ipsum magnam.</p>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 col-xl-2">
@@ -169,6 +173,7 @@
                                     <img src="assets/images/5.jpg" alt="Social">
                                 </div>
                                 <h4>Social Works</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda corrupti earum voluptatem eveniet sint numquam reprehenderit, ipsum magnam.</p>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 col-xl-2">
@@ -177,6 +182,7 @@
                                     <img src="assets/images/3.jpg" alt="Art">
                                 </div>
                                 <h4>Exploring Cultural Heritage</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda corrupti earum voluptatem eveniet sint numquam reprehenderit, ipsum magnam.</p>
                             </div>
                         </div>
                     </div>
@@ -186,7 +192,7 @@
         </div>
         <!-- __Two-section -->
         <div class="__two-section">
-            <div class="container">
+            <div class="container-md">
                 <div class="row row-gap-4">
                     <div class="col-12 col-md-6">
                         <span>Team Muktir Ghonta</span>
@@ -194,7 +200,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="__item">
                                     <div><svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 0 35 35"
                                             width="45px">
@@ -208,7 +214,7 @@
                                     <p>Members</p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="__item t">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 0 35 35"
@@ -220,6 +226,20 @@
                                     </div>
                                     <h3>15+</h3>
                                     <p>Projects</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__item m">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 0 35 35"
+                                            width="45px">
+                                            <path d="M0 0h24v24H0V0z" fill="none" />
+                                            <path
+                                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" />
+                                        </svg>
+                                    </div>
+                                    <h3>5+</h3>
+                                    <p>Years of Experience</p>
                                 </div>
                             </div>
                         </div>

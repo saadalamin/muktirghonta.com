@@ -1,5 +1,31 @@
+/*
+Developed & Designed by Mohammad Sefatullah
+https://github.com/mosefatullah
+https://www.linkedin.com/in/mosefatullah/
+*/
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. Font & Reset css
+02. Global styles
+03. Navigation bar
+04. Home
+05. About
+06. Achieve
+07. Wisdom
+08. Contact
+09. Footer
+10. Legal
+11. Media Queries
+12. Search Page
+13. 404 Page
+--------------------------------------------- */
+/* 
+---------------------------------------------
+Font & Reset css
+--------------------------------------------- 
+*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700;800&family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
-/*** SCROLLBAR ***/
 body::-webkit-scrollbar {
   width: 0.3em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -13,6 +39,13 @@ body::-webkit-scrollbar-thumb {
   background-color: #708090;
 }
 
+::selection,
+::-moz-selection,
+::-webkit-selection {
+  background-color: #1b76b3;
+  color: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,10 +54,21 @@ body {
   background-color: #f5f5f5;
   color: #333;
   scroll-behavior: smooth;
-  font-family: "Ubuntu", sans-serif;
 }
 
-/**__Common-Styles**/
+html,
+body {
+  font-family: "Ubuntu", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 
+---------------------------------------------
+Global styles
+--------------------------------------------- 
+*/
 .btn-round-effect {
   background-color: transparent;
   color: #333;
@@ -45,18 +89,40 @@ body {
   transform: scale(1.2);
 }
 
-input:hover, input:focus, textarea:hover, textarea:focus {
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
   box-shadow: none !important;
   border-width: 1.5px;
 }
 
-/**__Navigation-Bar**/
+/* 
+---------------------------------------------
+Navigation bar
+--------------------------------------------- 
+*/
 .__navbar {
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  height: 60px;
+  background-color: #12225b;
+  height: 65px;
   user-select: none;
   z-index: 1000;
+  transition: background-color 0.2s ease-in-out;
+}
+.__navbar.scrolled {
+  background-color: white;
+  background-image: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.__navbar.scrolled .__left svg,
+.__navbar.scrolled .__right svg {
+  fill: #333;
+}
+.__navbar.scrolled .__right .__menu-2 a {
+  color: #333;
+}
+.__navbar.scrolled .__right .__menu-2 a.active {
+  background-color: rgba(18, 34, 91, 0.2);
 }
 .__navbar .__left,
 .__navbar .__right {
@@ -64,42 +130,50 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   align-items: center;
   height: 100%;
 }
+.__navbar .__left svg,
+.__navbar .__right svg {
+  fill: #fff;
+}
 .__navbar .__menu-btn {
   margin-left: 1rem;
 }
 .__navbar .navbar-brand img {
-  width: 150px;
+  width: 140px;
   height: 100%;
   object-fit: cover;
-  padding: 0 1.2rem;
+  padding: 0rem 1.2rem;
 }
 .__navbar .__right {
   padding-right: 1rem;
 }
+.__navbar .__right .__menu-2 {
+  margin-right: 1rem;
+}
 .__navbar .__right .__menu-2 a {
-  color: #333;
+  color: #fff;
   font-size: 0.85rem;
   text-decoration: none;
   font-weight: 400;
-  margin: 0 0.8rem;
+  margin: 0 0.5rem;
+  padding: 0.1rem 1rem;
+  border-radius: 100rem;
 }
 .__navbar .__right .__menu-2 a.active {
-  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .__navbar .__right .__menu-2 a:hover {
-  color: rgba(51, 51, 51, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
-
-.__menu-1 {
+.__navbar .__menu-1 {
   padding-top: 1rem;
   user-select: none;
 }
-.__menu-1 .btn-close {
+.__navbar .__menu-1 .btn-close {
   margin-left: auto;
   margin-right: 1rem;
   padding: 1rem;
 }
-.__menu-1 a {
+.__navbar .__menu-1 a {
   width: fit-content;
   color: #333;
   font-size: 1rem;
@@ -108,14 +182,18 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   margin: 0.5rem 1.8rem;
   border-bottom: 1px dashed transparent;
 }
-.__menu-1 a.active {
+.__navbar .__menu-1 a.active {
   font-weight: 700;
 }
-.__menu-1 a:hover {
+.__navbar .__menu-1 a:hover {
   border-bottom: 1px solid #333;
 }
 
-/**__Home**/
+/* 
+---------------------------------------------
+Home
+--------------------------------------------- 
+*/
 .__home {
   /**__hero-section**/
   /**__one-section**/
@@ -127,17 +205,32 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   position: relative;
   display: flex;
   justify-content: center;
-  background-image: url("../images/white-banner.jpg");
+  background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: repeat;
   background-attachment: fixed;
   padding: 10rem 0;
+  color: #fff;
 }
 .__home .__hero-section .row > div:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.__home .__hero-section .row > div {
+  position: relative;
+}
+.__home .__hero-section .img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50px;
+  left: -50px;
+  background-color: rgba(206, 206, 206, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 0.6rem;
+  z-index: -1;
 }
 .__home .__hero-section img {
   width: 100%;
@@ -145,6 +238,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   aspect-ratio: 3/3;
   border-radius: 0.6rem;
   transition: padding 0.2s ease-in-out;
+  border: 6px solid rgba(255, 255, 255, 0.2);
 }
 .__home .__hero-section span {
   display: block;
@@ -170,12 +264,12 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  color: #12225b;
+  color: #fff;
   font-family: "Montserrat", serif;
 }
 .__home .__hero-section p {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.7rem;
   margin-bottom: 2rem;
 }
@@ -284,12 +378,12 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   color: #28af34;
 }
 .__home .__one-section .__areas .__area img {
-  width: 100%;
+  width: 55%;
   object-fit: cover;
   aspect-ratio: 1/1;
-  border-radius: 100rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
   margin-bottom: 1rem;
   transition: transform 0.2s ease-in-out;
 }
@@ -301,19 +395,19 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 .__home .__one-section .__areas .__area h4 {
   font-size: 0.7rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin: 0.8rem 0;
   text-transform: uppercase;
 }
 .__home .__one-section .__areas .__area p {
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1rem;
 }
-.__home .__two-section .container {
+.__home .__two-section .container-md {
   padding: 0 2rem;
   padding-top: 5rem;
 }
-.__home .__two-section .container span {
+.__home .__two-section .container-md span {
   display: inline-block;
   color: #28af34;
   font-size: 0.85rem;
@@ -322,7 +416,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   padding-right: 40px;
   margin-bottom: 1.3rem;
 }
-.__home .__two-section .container span::after {
+.__home .__two-section .container-md span::after {
   content: "";
   display: block;
   position: absolute;
@@ -333,21 +427,21 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   background-color: #28af34;
   margin-top: 0.5rem;
 }
-.__home .__two-section .container h2 {
+.__home .__two-section .container-md h2 {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
 }
-.__home .__two-section .container p {
+.__home .__two-section .container-md p {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.7rem;
   margin-bottom: 1.5rem;
 }
-.__home .__two-section .container .__item {
+.__home .__two-section .container-md .__item {
   text-align: center;
 }
-.__home .__two-section .container .__item div {
+.__home .__two-section .container-md .__item div {
   background-image: linear-gradient(60deg, #ff633a 0%, #e7b20e 100%);
   padding: 2rem;
   border-radius: 100rem;
@@ -355,21 +449,24 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   height: 100px;
   margin: 0 auto;
 }
-.__home .__two-section .container .__item div svg {
+.__home .__two-section .container-md .__item div svg {
   fill: #fff;
 }
-.__home .__two-section .container .__item h3 {
+.__home .__two-section .container-md .__item h3 {
   font-size: 1.7rem;
   font-weight: 700;
   margin-top: 1rem;
   margin-bottom: 0;
 }
-.__home .__two-section .container .__item p {
-  font-size: 1rem;
+.__home .__two-section .container-md .__item p {
+  font-size: 0.8rem;
   font-weight: 500;
 }
-.__home .__two-section .container .__item.t div {
+.__home .__two-section .container-md .__item.t div {
   background-image: linear-gradient(60deg, #0229a2 0%, #8381f2 100%);
+}
+.__home .__two-section .container-md .__item.m div {
+  background-image: linear-gradient(60deg, #B24968 0%, #4285F4 100%);
 }
 .__home .__two-section .teams-group {
   margin: 4rem 0;
@@ -377,6 +474,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 .__home .__two-section .teams-group .row {
   justify-content: center;
   width: 100%;
+  margin: 0;
 }
 .__home .__two-section .teams-group img {
   width: 100%;
@@ -393,7 +491,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   margin-top: 1.5rem;
 }
 .__home .__two-section #exploringTeam .carousel-inner {
-  background-color: #12225b;
+  background-color: #fff;
 }
 .__home .__two-section #exploringTeam .carousel-inner .carousel-item img {
   display: block;
@@ -403,8 +501,35 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   margin: 3.5rem auto;
   border-radius: 0.5rem;
 }
+.__home .__two-section #exploringTeam .carousel-control-prev-icon,
+.__home .__two-section #exploringTeam .carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100rem;
+  background-image: none;
+  padding: 8px;
+  width: 45px;
+  height: 45px;
+  transition: background-color 0.3s ease;
+}
+.__home .__two-section #exploringTeam .carousel-control-prev-icon::before,
+.__home .__two-section #exploringTeam .carousel-control-next-icon::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M11 2.5L6 8l5 5.5L9.5 15 2 8 9.5 1 11 2.5z'/%3E%3C/svg%3E");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.__home .__two-section #exploringTeam .carousel-control-next-icon::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M5 2.5l5 5.5-5 5.5L6.5 15 14 8 6.5 1 5 2.5z'/%3E%3C/svg%3E");
+}
 
-/**__About**/
+/* 
+---------------------------------------------
+About
+--------------------------------------------- 
+*/
 .__about {
   /**__hero-section**/
   /**__title-section**/
@@ -412,21 +537,22 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 }
 .__about .__hero-section {
   width: 100%;
-  min-height: 20vh;
+  height: fit-content;
   position: relative;
-  background-color: #f5f5f5;
-  color: #333;
-  background-image: url("../images/white-banner.jpg");
+  background-color: #12225b;
+  color: #fff;
+  background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: repeat;
-  padding: 1rem 2rem;
+  padding: 5rem 2rem;
+  margin-bottom: 5rem;
 }
 .__about .__hero-section h2 {
   font-size: 5rem;
   font-weight: 800;
   margin: 2.5rem 0;
-  color: #12225b;
+  color: #fff;
   font-family: "Playfair Display", serif;
   text-align: center;
 }
@@ -435,7 +561,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   font-size: 0.9rem;
   margin: 0 auto;
   margin-bottom: 4rem;
-  color: #12225b;
+  color: #fff;
   font-weight: 500;
   line-height: 1.3rem;
 }
@@ -487,7 +613,11 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   font-weight: 500;
 }
 
-/**__Achieve**/
+/* 
+---------------------------------------------
+Achieve
+--------------------------------------------- 
+*/
 .__achieve,
 .__updates {
   /**__hero-section**/
@@ -498,7 +628,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: #12225b;
+  background-color: #1b76b3;
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -566,7 +696,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 .__achieve .__list-updates .row a,
 .__updates .__list-achieve .row a,
 .__updates .__list-updates .row a {
-  color: #12225b;
+  color: #1b76b3;
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -574,12 +704,16 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 .__achieve .__list-updates .row a:hover,
 .__updates .__list-achieve .row a:hover,
 .__updates .__list-updates .row a:hover {
-  color: rgba(18, 34, 91, 0.5);
+  color: rgba(27, 118, 179, 0.5);
 }
 
-/**__Wisdom**/
+/* 
+---------------------------------------------
+Wisdom
+--------------------------------------------- 
+*/
 .__wisdom {
-  background-color: #12225b;
+  background-color: #1b76b3;
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -588,7 +722,11 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   background-color: #333;
 }
 
-/**__Contact**/
+/* 
+---------------------------------------------
+Contact
+--------------------------------------------- 
+*/
 .__contact {
   /**__hero-section**/
   /**__form-section**/
@@ -597,7 +735,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: #12225b;
+  background-color: #1b76b3;
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -638,37 +776,23 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 .__contact .__form-section .row .form-group input:focus,
 .__contact .__form-section .row .form-group textarea:focus {
   outline: none;
-  border-color: #12225b;
+  border-color: #1b76b3;
 }
 .__contact .__form-section .row .form-group textarea {
   resize: none;
   height: 150px;
 }
 .__contact .__form-section .row .btn {
-  width: fit-content;
-  background-color: #3498db;
-  color: #fff;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  transition: transform 0.1s ease-in-out, background-color 0.2s ease-in-out;
+  width: 100%;
   font-size: 1rem;
   font-weight: 500;
 }
-.__contact .__form-section .row .btn svg {
-  fill: #333;
-}
-.__contact .__form-section .row .btn:hover {
-  background-color: rgba(52, 152, 219, 0.2);
-}
-.__contact .__form-section .row .btn:active {
-  background-color: transparent;
-  transform: scale(1.2);
-}
-.__contact .__form-section .row .btn:hover {
-  background-color: rgba(52, 152, 219, 0.7);
-}
 
-/**__Footer**/
+/* 
+---------------------------------------------
+Footer
+--------------------------------------------- 
+*/
 .__footer {
   background-color: rgba(18, 18, 23, 0.9);
   color: #fff;
@@ -714,7 +838,11 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   margin-right: 1rem;
 }
 
-/**__Legal**/
+/* 
+---------------------------------------------
+Legal
+--------------------------------------------- 
+*/
 .__legal p {
   white-space: pre-line;
   padding: 1.5rem 0;
@@ -723,7 +851,11 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   padding: 1.5rem 0;
 }
 
-/**__Media-Queries**/
+/* 
+---------------------------------------------
+Media Queries
+--------------------------------------------- 
+*/
 @media (max-width: 1200px) {
   .__home .__hero-section h2 {
     font-size: 3rem;
@@ -738,16 +870,23 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 }
 @media (max-width: 992px) {
   .__home .__hero-section {
-    padding: 2rem 0;
+    padding: 1rem 0;
+    padding-bottom: 6rem;
   }
   .__home .__hero-section .row > div:last-child {
     padding: 0 2rem;
     text-align: center;
     align-items: center;
   }
+  .__home .__hero-section .img-overlay {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
   .__home .__hero-section img {
     aspect-ratio: 16/9;
     padding: 0 1rem;
+    border-width: 2px;
   }
   .__home .__hero-section h2 {
     font-size: 2.5rem;
@@ -800,7 +939,11 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     font-size: 1.4rem;
   }
 }
-/**__Search-page**/
+/* 
+---------------------------------------------
+Search Page
+--------------------------------------------- 
+*/
 .__search-page .search-results {
   margin-top: 2rem;
 }
@@ -820,7 +963,11 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   margin-top: 0.5rem;
 }
 
-/**__404-page **/
+/* 
+---------------------------------------------
+404 Page
+--------------------------------------------- 
+*/
 .__404-page {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 50px auto 40px auto;
