@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /assets/
+Disallow: *
+Allow: /index.html
+Allow: /about.html
