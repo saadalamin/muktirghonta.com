@@ -3,20 +3,26 @@
  const $$$ = function () {
   /*------------------------------------------------
   Global
+  -
+  @ Navbar Scroll Effect
   */
   //////////////////////////////////
-  window.addEventListener("scroll", function () {
+  const $sc = function () {
    let header = document.querySelectorAll(".__navbar")[0];
    let headerHeight = header.offsetHeight;
    let scrollTop = window.pageYOffset || window.scrollTop;
-   if (scrollTop > (headerHeight + 500)) {
+   if (scrollTop > headerHeight + 500) {
     header.classList.add("scrolled");
-    header.querySelectorAll(".navbar-brand img")[0].src = "assets/images/logo.png";
+    header.querySelectorAll(".navbar-brand img")[0].src =
+     "assets/images/logo.png";
    } else {
     header.classList.remove("scrolled");
-    header.querySelectorAll(".navbar-brand img")[0].src = "assets/images/logo-cut.png";
+    header.querySelectorAll(".navbar-brand img")[0].src =
+     "assets/images/logo-cut.png";
    }
-  });
+  };
+  window.addEventListener("scroll", $sc);
+  window.addEventListener("load", $sc);
 
   /*------------------------------------------------
   Home Page Interaction
