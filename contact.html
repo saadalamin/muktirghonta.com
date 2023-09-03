@@ -115,7 +115,11 @@
                     <p class="status text-danger pb-4"></p>
                     <div class="row">
                         <div class="col-md-8 mb-md-0 mb-5">
-                            <form id="contact-form" name="contact-form">
+                            <form id="contact-form" name="contact-form" action="https://api.web3forms.com/submit"
+                                method="POST">
+                                <input type="hidden" name="access_key" value="09964132-46d5-4f92-b1a4-8e9465f438c6">
+                                <input type="hidden" name="replyto" value="muktirghonta@gmail.com" />
+                                <input type="hidden" name="from_name" value="Muktir Ghonta">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="md-form mb-3">
@@ -147,19 +151,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-check mt-4 mb-3">
-                                    <input type="checkbox" class="form-check-input" name="updates" id="updates"
-                                        value="1">
-                                    <label for="updates" class="form-check-label">Notify me about new updates</label>
+                                <div class="py-3">
+                                    <div class="h-captcha" data-captcha="true" aria-required="true"></div>
                                 </div>
                             </form>
                             <div class="text-center text-md-left">
                                 <a class="btn btn-primary" onclick="validateForm();">Send</a>
                             </div>
                         </div>
-                        <div class="col-md-4 text-center">
-                            
-                        </div>
+                        <div class="col-md-4 text-center"></div>
                     </div>
                 </section>
             </div>
@@ -216,11 +216,16 @@
 
     <!-- __Scripts -->
     <script src="assets/scripts/bootstrap-bundle.min.js"></script>
-    <script src="assets/scripts/vanilla-tilt.min.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.19.1/dist/algoliasearch-lite.umd.js"
         integrity="sha256-qzlNbRtZWHoUV5I2mI2t9QR7oYXlS9oNctX+0pECXI0=" crossorigin="anonymous"></script>
     <script src="assets/scripts/index.js"></script>
     <script>
+        document.body.onload = function () {
+            document.getElementById('name').focus();
+            document.getElementById('subject').value = "";
+            document.getElementById('message').value = "";
+        }
         function validateForm() {
             var name = document.getElementById('name').value;
             var status = document.querySelector('.status')
@@ -244,14 +249,23 @@
                 status.innerHTML = "Subject cannot be empty";
                 return false;
             }
+            if (!subject.includes("[Contact] ") && !subject.includes("| from ")) {
+                document.getElementById('subject').value = "[Contact] " + subject + " | from " + name;
+            }
             var message = document.getElementById('message').value;
             if (message == "") {
                 status.innerHTML = "Message cannot be empty";
                 return false;
             }
+            var hCaptcha = document.querySelector('textarea[name=h-captcha-response]').value;
+            if (!hCaptcha) {
+                status.innerHTML = 'Please check the captcha box.';
+                return false;
+            }
             status.innerHTML = "<div class='spinner spinner-border'></div><sup class='px-3'>Sending...</sup>";
             status.classList.remove('text-danger');
             status.classList.add('text-success');
+            document.getElementById('contact-form').submit();
         }
     </script>
 </body>
