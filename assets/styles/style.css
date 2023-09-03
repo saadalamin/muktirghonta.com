@@ -25,7 +25,8 @@ Table of contents
 Font & Reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700;800&family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800&display=swap");
 body::-webkit-scrollbar {
   width: 0.3em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -48,17 +49,17 @@ body::-webkit-scrollbar-thumb {
 
 * {
   box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
 }
 
 body {
   background-color: #f5f5f5;
-  color: #333;
+  color: #3f3f3f;
   scroll-behavior: smooth;
 }
 
 html,
 body {
-  font-family: "Ubuntu", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,7 +72,7 @@ Global styles
 */
 .btn-round-effect {
   background-color: transparent;
-  color: #333;
+  color: #3f3f3f;
   border-radius: 5px;
   padding: 0.5rem 0.6rem;
   transition: transform 0.1s ease-in-out, background-color 0.2s ease-in-out;
@@ -79,7 +80,7 @@ Global styles
   border: 0;
 }
 .btn-round-effect svg {
-  fill: #333;
+  fill: #3f3f3f;
 }
 .btn-round-effect:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -116,10 +117,10 @@ Navigation bar
 }
 .__navbar.scrolled .__left svg,
 .__navbar.scrolled .__right svg {
-  fill: #333;
+  fill: #3f3f3f;
 }
 .__navbar.scrolled .__right .__menu-2 a {
-  color: #333;
+  color: #3f3f3f;
 }
 .__navbar.scrolled .__right .__menu-2 a.active {
   background-color: rgba(18, 34, 91, 0.2);
@@ -150,7 +151,7 @@ Navigation bar
   margin-right: 1rem;
 }
 .__navbar .__right .__menu-2 a {
-  color: #fff;
+  color: #ffffff;
   font-size: 0.85rem;
   text-decoration: none;
   font-weight: 400;
@@ -162,7 +163,7 @@ Navigation bar
   background-color: rgba(255, 255, 255, 0.2);
 }
 .__navbar .__right .__menu-2 a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.6;
 }
 .__navbar .__menu-1 {
   padding-top: 1rem;
@@ -175,7 +176,7 @@ Navigation bar
 }
 .__navbar .__menu-1 a {
   width: fit-content;
-  color: #333;
+  color: #3f3f3f;
   font-size: 1rem;
   text-decoration: none;
   font-weight: 400;
@@ -186,7 +187,7 @@ Navigation bar
   font-weight: 700;
 }
 .__navbar .__menu-1 a:hover {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #3f3f3f;
 }
 
 /* 
@@ -205,13 +206,14 @@ Home
   position: relative;
   display: flex;
   justify-content: center;
+  background-color: #12225b;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: repeat;
   background-attachment: fixed;
   padding: 10rem 0;
-  color: #fff;
+  color: #ffffff;
 }
 .__home .__hero-section .row > div:last-child {
   display: flex;
@@ -264,7 +266,7 @@ Home
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  color: #fff;
+  color: #ffffff;
   font-family: "Montserrat", serif;
 }
 .__home .__hero-section p {
@@ -275,8 +277,8 @@ Home
 }
 .__home .__hero-section .btn {
   width: fit-content;
-  background-color: #3498db;
-  color: #fff;
+  background-color: #1b76b3;
+  color: #ffffff;
   border-radius: 5px;
   padding: 0.5rem 1rem;
   transition: transform 0.1s ease-in-out, background-color 0.2s ease-in-out;
@@ -284,17 +286,17 @@ Home
   font-weight: 500;
 }
 .__home .__hero-section .btn svg {
-  fill: #333;
+  fill: #3f3f3f;
 }
 .__home .__hero-section .btn:hover {
-  background-color: rgba(52, 152, 219, 0.2);
+  background-color: rgba(27, 118, 179, 0.2);
 }
 .__home .__hero-section .btn:active {
   background-color: transparent;
   transform: scale(1.2);
 }
 .__home .__hero-section .btn:hover {
-  background-color: rgba(52, 152, 219, 0.7);
+  background-color: rgba(27, 118, 179, 0.7);
 }
 .__home .__hero-section .right-dots {
   position: absolute;
@@ -332,9 +334,9 @@ Home
 .__home .__one-section {
   width: 100%;
   padding: 5rem 1.5rem;
-  background-color: #fff;
+  background-color: #ffffff;
   background-color: #f9f9f9;
-  border-bottom: 1px solid rgba(18, 18, 23, 0.1);
+  border-bottom: 1px solid rgba(192, 208, 223, 0.1);
 }
 .__home .__one-section span {
   display: inline-block;
@@ -363,7 +365,7 @@ Home
 }
 .__home .__one-section p {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.7rem;
   margin-bottom: 1.5rem;
 }
@@ -388,7 +390,7 @@ Home
   object-fit: cover;
   aspect-ratio: 1/1;
   border-radius: 100rem;
-  border: 8px solid rgba(18, 18, 23, 0.2);
+  border: 8px solid rgba(192, 208, 223, 0.5);
   margin-bottom: 1rem;
   transition: transform 0.2s ease-in-out;
 }
@@ -397,7 +399,7 @@ Home
   font-weight: 700;
   padding: 2.5rem 0.5rem 1.8rem 0.5rem;
   text-transform: uppercase;
-  background-color: rgba(18, 34, 91, 0.2);
+  background-color: #c0d0df;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 0.7rem;
   margin-top: -2.5rem;
@@ -411,11 +413,10 @@ Home
 .__home .__two-section {
   background-color: #fff;
 }
-.__home .__two-section .container-md {
-  padding: 0 2rem;
-  padding-top: 5rem;
+.__home .__two-section .__main {
+  padding: 5rem 2rem;
 }
-.__home .__two-section .container-md span {
+.__home .__two-section .__main span {
   display: inline-block;
   color: #28af34;
   font-size: 0.85rem;
@@ -424,7 +425,7 @@ Home
   padding-right: 40px;
   margin-bottom: 1.3rem;
 }
-.__home .__two-section .container-md span::after {
+.__home .__two-section .__main span::after {
   content: "";
   display: block;
   position: absolute;
@@ -435,24 +436,22 @@ Home
   background-color: #28af34;
   margin-top: 0.5rem;
 }
-.__home .__two-section .container-md h2 {
+.__home .__two-section .__main h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
-.__home .__two-section .container-md p {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.7rem;
-  margin-bottom: 1.5rem;
-}
-.__home .__two-section .container-md .__item {
+.__home .__two-section .__main .__item {
   text-align: center;
-  background-color: #fff;
-  padding: 1rem 1rem;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #c0d0df;
+  padding: 2rem 0;
   border-radius: 0.7rem;
+  justify-content: center;
+  align-items: center;
 }
-.__home .__two-section .container-md .__item div {
+.__home .__two-section .__main .__item div {
   background-image: linear-gradient(60deg, #ff633a 0%, #e7b20e 100%);
   padding: 2rem;
   border-radius: 100rem;
@@ -460,23 +459,23 @@ Home
   height: 100px;
   margin: 0 auto;
 }
-.__home .__two-section .container-md .__item div svg {
+.__home .__two-section .__main .__item div svg {
   fill: #fff;
 }
-.__home .__two-section .container-md .__item h3 {
+.__home .__two-section .__main .__item h3 {
   font-size: 1.7rem;
   font-weight: 700;
   margin-top: 1rem;
   margin-bottom: 0;
 }
-.__home .__two-section .container-md .__item p {
+.__home .__two-section .__main .__item p {
   font-size: 0.8rem;
   font-weight: 500;
 }
-.__home .__two-section .container-md .__item.t div {
+.__home .__two-section .__main .__item.t div {
   background-image: linear-gradient(60deg, #0229a2 0%, #8381f2 100%);
 }
-.__home .__two-section .container-md .__item.m div {
+.__home .__two-section .__main .__item.m div {
   background-image: linear-gradient(60deg, #b24968 0%, #4285f4 100%);
 }
 .__home .__two-section .teams-group {
@@ -489,7 +488,7 @@ Home
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 8rem 0;
-  border-top: 1px solid rgba(18, 18, 23, 0.1);
+  border-top: 1px solid rgba(192, 208, 223, 0.1);
 }
 .__home .__two-section .teams-group .row {
   justify-content: center;
@@ -511,7 +510,7 @@ Home
   margin-top: 1.5rem;
 }
 .__home .__two-section #exploringTeam .carousel-inner {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .__home .__two-section #exploringTeam .carousel-inner .carousel-item img {
   display: block;
@@ -560,7 +559,7 @@ About
   height: fit-content;
   position: relative;
   background-color: #12225b;
-  color: #fff;
+  color: #ffffff;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
@@ -572,7 +571,7 @@ About
   font-size: 5rem;
   font-weight: 800;
   margin: 2.5rem 0;
-  color: #fff;
+  color: #ffffff;
   font-family: "Playfair Display", serif;
   text-align: center;
 }
@@ -581,14 +580,14 @@ About
   font-size: 0.9rem;
   margin: 0 auto;
   margin-bottom: 4rem;
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   line-height: 1.3rem;
 }
 .__about .__title {
   padding: 2.5rem;
   background-color: #12225b;
-  color: #fff;
+  color: #ffffff;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
@@ -648,7 +647,7 @@ Achieve
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: #1b76b3;
+  background-color: rgba(18, 34, 91, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -660,7 +659,7 @@ Achieve
   font-size: 2.2rem;
   font-weight: 800;
   margin: 2.5rem auto;
-  color: #fff;
+  color: #ffffff;
   font-family: "Playfair Display", serif;
   align-self: center;
 }
@@ -710,13 +709,13 @@ Achieve
   font-size: 0.7rem;
   font-weight: 500;
   margin-bottom: 0;
-  color: rgba(51, 51, 51, 0.8);
+  color: rgba(63, 63, 63, 0.8);
 }
 .__achieve .__list-achieve .row a,
 .__achieve .__list-updates .row a,
 .__updates .__list-achieve .row a,
 .__updates .__list-updates .row a {
-  color: #1b76b3;
+  color: #c0d0df;
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -724,7 +723,7 @@ Achieve
 .__achieve .__list-updates .row a:hover,
 .__updates .__list-achieve .row a:hover,
 .__updates .__list-updates .row a:hover {
-  color: rgba(27, 118, 179, 0.5);
+  color: rgba(192, 208, 223, 0.5);
 }
 
 /* 
@@ -733,13 +732,13 @@ Wisdom
 --------------------------------------------- 
 */
 .__wisdom {
-  background-color: #1b76b3;
+  background-color: rgba(18, 34, 91, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 .__wisdom .__blog-section iframe {
-  background-color: #333;
+  background-color: #3f3f3f;
 }
 
 /* 
@@ -755,7 +754,7 @@ Contact
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: #1b76b3;
+  background-color: rgba(18, 34, 91, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -766,7 +765,7 @@ Contact
   font-size: 2.2rem;
   font-weight: 800;
   margin: 2.5rem auto;
-  color: #fff;
+  color: #ffffff;
   font-family: "Playfair Display", serif;
   align-self: center;
 }
@@ -788,7 +787,7 @@ Contact
 .__contact .__form-section .row .form-group textarea {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(51, 51, 51, 0.5);
+  border: 1px solid rgba(63, 63, 63, 0.5);
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -796,7 +795,7 @@ Contact
 .__contact .__form-section .row .form-group input:focus,
 .__contact .__form-section .row .form-group textarea:focus {
   outline: none;
-  border-color: #1b76b3;
+  border-color: #c0d0df;
 }
 .__contact .__form-section .row .form-group textarea {
   resize: none;
@@ -814,8 +813,8 @@ Footer
 --------------------------------------------- 
 */
 .__footer {
-  background-color: rgba(18, 18, 23, 0.9);
-  color: #fff;
+  background-color: #bdcddd;
+  color: #3f3f3f;
   padding: 7rem 1rem;
 }
 .__footer p {
@@ -823,9 +822,15 @@ Footer
   padding: 0.5rem 0;
   line-height: 1.5rem;
 }
+.__footer a > img {
+  filter: invert(80%);
+}
+.__footer h3 {
+  border-bottom: 1px solid rgba(63, 63, 63, 0.2);
+}
 .__footer a,
 .__footer span {
-  color: #fff;
+  color: #3f3f3f;
   font-size: 0.85rem;
   text-decoration: none;
 }
@@ -838,6 +843,8 @@ Footer
 }
 .__footer .container:first-child h5 {
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(63, 63, 63, 0.2);
 }
 .__footer .container:first-child a,
 .__footer .container:first-child span {
@@ -935,7 +942,9 @@ Media Queries
     display: none;
   }
   .__home .__two-section .__item {
-    padding: 1rem 0.5rem;
+    padding: 0;
+    background-color: transparent !important;
+    border: 0 !important;
   }
   .__home .__two-section .__item h3 {
     font-size: 1.3rem;

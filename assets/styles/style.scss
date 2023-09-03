@@ -26,14 +26,13 @@ Table of contents
 Font & Reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700;800&family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800&display=swap");
 
 $primary-color: #12225b;
-$primary-text-color: #333;
-$secondary-color: #1b76b3;
-$secondary-text-color: #fff;
-$last-color: #121217;
-$last-text-color: #fff;
+$primary-text-color: #3f3f3f;
+$secondary-color: #c0d0df;
+$secondary-text-color: #ffffff;
 
 body::-webkit-scrollbar {
  width: 0.3em;
@@ -55,6 +54,7 @@ body::-webkit-scrollbar-thumb {
 
 * {
  box-sizing: border-box;
+ font-family: "Noto Sans", sans-serif;
 }
 
 body {
@@ -65,7 +65,6 @@ body {
 
 html,
 body {
- font-family: "Ubuntu", sans-serif;
  -ms-text-size-adjust: 100%;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
@@ -183,7 +182,7 @@ Navigation bar
      background-color: rgba(255, 255, 255, 0.2);
     }
     &:hover {
-     color: rgba($secondary-text-color, 0.5);
+     opacity: 0.6;
     }
    }
   }
@@ -228,6 +227,7 @@ Home
   position: relative;
   display: flex;
   justify-content: center;
+  background-color: $primary-color;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
@@ -297,11 +297,11 @@ Home
   }
   .btn {
    width: fit-content;
-   @include btnEffect(#3498db, $secondary-text-color);
+   @include btnEffect(#1b76b3, #ffffff);
    font-size: 0.8rem;
    font-weight: 500;
    &:hover {
-    background-color: rgba(#3498db, 0.7);
+    background-color: rgba(#1b76b3, 0.7);
    }
   }
   .right-dots {
@@ -344,7 +344,7 @@ Home
   padding: 5rem 1.5rem;
   background-color: $secondary-text-color;
   background-color: #f9f9f9;
-  border-bottom: 1px solid rgba($last-color, 0.1);
+  border-bottom: 1px solid rgba($secondary-color, 0.1);
   span {
    display: inline-block;
    color: #28af34;
@@ -372,7 +372,7 @@ Home
   }
   p {
    font-size: 1rem;
-   font-weight: 500;
+   font-weight: 400;
    line-height: 1.7rem;
    margin-bottom: 1.5rem;
   }
@@ -395,7 +395,7 @@ Home
      object-fit: cover;
      aspect-ratio: 1/1;
      border-radius: 100rem;
-     border: 8px solid rgba($last-color, 0.2);
+     border: 8px solid rgba($secondary-color, 0.5);
      margin-bottom: 1rem;
      transition: transform 0.2s ease-in-out;
     }
@@ -404,7 +404,7 @@ Home
      font-weight: 700;
      padding: 2.5rem 0.5rem 1.8rem 0.5rem;
      text-transform: uppercase;
-     background-color: rgba($primary-color, 0.2);
+     background-color: $secondary-color;
      border: 1px solid rgba(0, 0, 0, 0.05);
      border-radius: 0.7rem;
      margin-top: -2.5rem;
@@ -421,9 +421,8 @@ Home
  /**__two-section**/
  .__two-section {
   background-color: #fff;
-  .container-md {
-   padding: 0 2rem;
-   padding-top: 5rem;
+  .__main {
+   padding: 5rem 2rem;
    span {
     display: inline-block;
     color: #28af34;
@@ -447,19 +446,17 @@ Home
    h2 {
     font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
-   }
-   p {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.7rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
    }
    .__item {
     text-align: center;
-    background-color: #fff;
-    padding: 1rem 1rem;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: $secondary-color;
+    padding: 2rem 0;
     border-radius: 0.7rem;
+    justify-content: center;
+    align-items: center;
     div {
      background-image: linear-gradient(60deg, #ff633a 0%, #e7b20e 100%);
      padding: 2rem;
@@ -503,7 +500,7 @@ Home
    background-repeat: no-repeat;
    background-attachment: fixed;
    padding: 8rem 0;
-   border-top: 1px solid rgba($last-color, 0.1);
+   border-top: 1px solid rgba($secondary-color, 0.1);
    .row {
     justify-content: center;
     width: 100%;
@@ -662,7 +659,7 @@ Achieve
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: $secondary-color;
+  background-color: rgba($primary-color, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -724,7 +721,7 @@ Wisdom
 --------------------------------------------- 
 */
 .__wisdom {
- background-color: $secondary-color;
+ background-color: rgba($primary-color, 0.75);
  background-image: url("../images/blue-banner-blur.jpg");
  background-size: cover;
  background-attachment: fixed;
@@ -743,7 +740,7 @@ Contact
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: $secondary-color;
+  background-color: rgba($primary-color, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -804,17 +801,24 @@ Footer
 --------------------------------------------- 
 */
 .__footer {
- background-color: rgba($last-color, 0.9);
- color: $last-text-color;
+ background-color: darken($secondary-color, 1%);
+ color: $primary-text-color;
  padding: 7rem 1rem;
  p {
   font-size: 0.85rem;
   padding: 0.5rem 0;
   line-height: 1.5rem;
  }
+ a > img {
+  filter: invert(80%);
+ }
+ h3 {
+    
+   border-bottom: 1px solid rgba($primary-text-color, 0.2);
+ }
  a,
  span {
-  color: $last-text-color;
+  color: $primary-text-color;
   font-size: 0.85rem;
   text-decoration: none;
   &:hover {
@@ -825,6 +829,8 @@ Footer
   padding-bottom: 3rem;
   h5 {
    margin-bottom: 1rem;
+   padding-bottom: 0.5rem;
+   border-bottom: 1px solid rgba($primary-text-color, 0.2);
   }
   a,
   span {
@@ -940,7 +946,9 @@ Media Queries
   }
   .__two-section {
    .__item {
-    padding: 1rem 0.5rem;
+    padding: 0;
+    background-color: transparent !important;
+    border: 0 !important;
     h3 {
      font-size: 1.3rem;
     }
