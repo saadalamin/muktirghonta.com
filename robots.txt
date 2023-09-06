@@ -1,4 +1,9 @@
 User-agent: *
 Disallow: *
+Allow: /$
 Allow: /index.html
 Allow: /about.html
+Allow: /achieve.html
+Allow: /updates.html
+
+Sitemap: https://muktirghonta.com/sitemap.xml
