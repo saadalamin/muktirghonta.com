@@ -179,14 +179,14 @@
                 </svg>
             </div>
             <div class="navbar-brand">
-                <a href="https://muktirghonta.com/index.html"><img src="https://muktirghonta.com/assets/images/logo.png"
+                <a href="https://muktirghonta.com/"><img src="https://muktirghonta.com/assets/images/logo.png"
                         alt="Muktir Ghonta"></a>
             </div>
         </div>
         <div class="__right">
             <div class="__menu-2 d-none d-lg-block">
                 <div class="d-flex">
-                    <a href="https://muktirghonta.com/index.html">Home</a>
+                    <a href="https://muktirghonta.com/">Home</a>
                     <a href="https://muktirghonta.com/about.html">About Us</a>
                     <a href="https://muktirghonta.com/achieve.html">Achievements</a>
                     <a href="https://muktirghonta.com/updates.html">Updates</a>
@@ -207,7 +207,7 @@
         <div class="btn-close btn-round-effect" data-bs-toggle="offcanvas" data-bs-target="#menuPage">
         </div>
         <div class="d-flex flex-column">
-            <a href="https://muktirghonta.com/index.html">Home</a>
+            <a href="https://muktirghonta.com/">Home</a>
             <a href="https://muktirghonta.com/about.html">About Us</a>
             <a href="https://muktirghonta.com/achieve.html">Achievements</a>
             <a href="https://muktirghonta.com/updates.html">Updates</a>
@@ -224,14 +224,14 @@
 
         <p>
             If you're sure the address is correct, try checking your spelling or
-            <a href="https://muktirghonta.com/index.html">return to the home page</a>. If you're not sure what happened,
+            <a href="https://muktirghonta.com/">return to the home page</a>. If you're not sure what happened,
             try waiting a few
             minutes and reloading the page. Because it can sometimes takes a few
             minutes for a newly pushed site to propagate to servers worldwide.
         </p>
 
         <div id="suggestions">
-            <a href="https://muktirghonta.com/index.html">Home page</a> &mdash;
+            <a href="https://muktirghonta.com/">Home page</a> &mdash;
             <a href="https://muktirghonta.com/about.html">About Us</a>
         </div>
 

@@ -48,7 +48,7 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             </div>
             <div class="search-results">
-                <p class="text-muted ps-2">No Results</p>
+                <p class="text-muted ps-2"></p>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
 
   const algoliaSearchConnect = algoliasearch(
    "8Z5XBTCS67",
-   "d7542c85dae057fc2a49cbde256ba39b"
+   "366279504d77a639904ee660ccdfb4fb"
   );
 
   let algoliaSearchIndex = algoliaSearchConnect.initIndex("search_contents");
@@ -83,6 +83,8 @@
      );
      algoliaSearchResults.innerHTML = searchResults.join("");
     });
+   } else {
+    algoliaSearchResults.innerHTML = `<p class="text-muted ps-2"></p>`;
    }
   });
 
