@@ -29,7 +29,7 @@ Font & Reset css
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800&display=swap");
 
-$primary-color: #12225b;
+$primary-color: #183668;
 $primary-text-color: #3f3f3f;
 $secondary-color: #c0d0df;
 $secondary-text-color: #ffffff;
@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
- background-color: #f5f5f5;
+ background-color: $primary-color;
  color: $primary-text-color;
  scroll-behavior: smooth;
 }
@@ -256,44 +256,45 @@ Home
  /**__hero-section**/
  .__hero-section {
   width: 100%;
-  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: $primary-color;
-  background-image: url("../images/blue-banner.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  padding: 10rem 0;
+  background-color: darken($primary-color, 5%);
+  padding: 5rem 0 8rem 0;
   color: $secondary-text-color;
   .row > div:last-child {
    display: flex;
    flex-direction: column;
    justify-content: center;
   }
-  .row > div {
+  .__hero-img {
    position: relative;
-  }
-  .img-overlay {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 50px;
-   left: -50px;
-   background-color: rgba(206, 206, 206, 0.1);
-   backdrop-filter: blur(5px);
-   border-radius: 0.6rem;
-   z-index: -1;
-  }
-  img {
-   width: 100%;
-   object-fit: cover;
-   aspect-ratio: 3/3;
-   border-radius: 0.6rem;
-   transition: padding 0.2s ease-in-out;
-   border: 6px solid rgba(255, 255, 255, 0.2);
+   display: flex;
+   justify-content: center;
+   .img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 2rem;
+    margin-right: 4rem;
+    background-color: rgba(206, 206, 206, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 0.6rem;
+    transform: skew(-5deg);
+   }
+   img {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    aspect-ratio: 3/3;
+    border-radius: 0.6rem;
+    transition: opacity 0.2s ease-in-out;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    transform: skew(-5deg);
+   }
   }
   span {
    display: block;
@@ -558,14 +559,13 @@ About
   width: 100%;
   height: fit-content;
   position: relative;
-  background-color: $primary-color;
+  background-color: darken($primary-color, 5%);
   color: $secondary-text-color;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: repeat;
   padding: 5rem 2rem;
-  margin-bottom: 5rem;
   h2 {
    font-size: 5rem;
    font-weight: 800;
@@ -578,7 +578,6 @@ About
    max-width: 900px;
    font-size: 0.9rem;
    margin: 0 auto;
-   margin-bottom: 4rem;
    color: $secondary-text-color;
    font-weight: 500;
    line-height: 1.3rem;
@@ -589,11 +588,6 @@ About
   padding: 2.5rem;
   background-color: $primary-color;
   color: $secondary-text-color;
-  background-image: url("../images/blue-banner.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: repeat;
-  background-attachment: fixed;
   h2 {
    font-size: 1.4rem;
    margin: 0;
@@ -646,7 +640,7 @@ Achieve
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: rgba($primary-color, 0.75);
+  background-color: darken($primary-color, 5%);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -665,16 +659,27 @@ Achieve
  .__list-achieve,
  .__list-updates {
   width: 100%;
-  background-color: #fff;
+  background-color: lighten($secondary-color, 5%);
   padding: 2rem 1rem;
   padding-bottom: 6rem;
   .row {
    justify-content: center;
+   .tile {
+    display: flex;
+    flex-direction: column;
+   }
+   .tile > div {
+    background-color: $secondary-color;
+    color: $primary-text-color;
+    padding: 1rem;
+    height: 100% !important;
+   }
    img {
     width: 100%;
     object-fit: cover;
     aspect-ratio: 4/5;
-    border-radius: 0.3rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     &:hover {
      opacity: 0.8;
     }
@@ -683,20 +688,23 @@ Achieve
     font-size: 1.25rem;
     font-weight: 500;
     font-family: "PT Sans", sans-serif;
-    margin-top: 0.8rem;
    }
    p {
     font-size: 0.7rem;
     font-weight: 500;
-    margin-bottom: 0;
+    margin: 0.4rem 0;
     color: rgba($primary-text-color, 0.8);
    }
    a {
-    color: $secondary-color;
+    background-color: lighten($primary-color, 45%);
+    color: $primary-color;
+    text-decoration: none;
     font-size: 0.8rem;
     font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
     &:hover {
-     color: rgba($secondary-color, 0.5);
+     opacity: 0.8;
     }
    }
   }
@@ -750,7 +758,7 @@ Contact
   padding-bottom: 6rem;
   .row {
    justify-content: center;
-   .form-group {
+   .md-form {
     width: 100%;
     max-width: 500px;
     margin-bottom: 1rem;
@@ -758,14 +766,16 @@ Contact
     textarea {
      width: 100%;
      padding: 0.5rem 1rem;
-     border: 1px solid rgba($primary-text-color, 0.5);
      border-radius: 5px;
      font-size: 0.9rem;
      font-weight: 500;
      &:focus {
       outline: none;
-      border-color: $secondary-color;
+      border-color: #4183c4;
      }
+    }
+    label {
+        margin-bottom: 0.5rem;
     }
     textarea {
      resize: none;
@@ -889,15 +899,11 @@ Media Queries
     text-align: center;
     align-items: center;
    }
-   .img-overlay {
+   .img-overlay,
+   img {
     display: none;
     visibility: hidden;
     opacity: 0;
-   }
-   img {
-    aspect-ratio: 16/9;
-    padding: 0 1rem;
-    border-width: 2px;
    }
    h2 {
     font-size: 2.5rem;

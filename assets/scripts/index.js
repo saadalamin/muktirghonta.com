@@ -11,7 +11,7 @@
    let header = document.querySelectorAll(".__navbar")[0];
    let headerHeight = header.offsetHeight;
    let scrollTop = window.pageYOffset || window.scrollTop;
-   if (scrollTop > headerHeight + 500) {
+   if (scrollTop > headerHeight + 400) {
     header.classList.add("scrolled");
     header.querySelectorAll(".navbar-brand img")[0].src =
      "assets/images/logo.png";
@@ -96,7 +96,6 @@
   let square2 = document.querySelectorAll(".vector2")[0];
   let square3 = document.querySelectorAll(".right-dots")[0];
   let square4 = document.querySelectorAll(".__hero-section img")[0];
-  let square5 = document.querySelectorAll(".__hero-section")[0];
 
   window.addEventListener("scroll", function () {
    let scrollTop = window.pageYOffset || window.scrollTop;
@@ -105,9 +104,7 @@
    square1.style.right = 80 + scrollPercent * 50 + "px";
    square2.style.right = scrollPercent * 50 * 0.6 + "px";
    square3.style.right = 125 + scrollPercent * 20 * 0.2 + "px";
-   square4.style.padding =
-    scrollPercent * 1 <= 10 ? scrollPercent * 1 + "rem" : 0;
-   square5.style.backgroundPosition = "0 " + scrollPercent * 6 + "px";
+   square4.style.opacity = 1 - scrollPercent / 8;
   });
 
   //////////////////////////////////

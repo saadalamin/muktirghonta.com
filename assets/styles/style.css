@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #183668;
   color: #3f3f3f;
   scroll-behavior: smooth;
 }
@@ -135,7 +135,7 @@ Navigation bar
 --------------------------------------------- 
 */
 .__navbar {
-  background-color: #12225b;
+  background-color: #183668;
   height: 65px;
   user-select: none;
   z-index: 1000;
@@ -154,7 +154,7 @@ Navigation bar
   color: #3f3f3f;
 }
 .__navbar.scrolled .__right .__menu-2 a.active {
-  background-color: rgba(18, 34, 91, 0.2);
+  background-color: rgba(24, 54, 104, 0.2);
 }
 .__navbar .__left,
 .__navbar .__right {
@@ -233,17 +233,11 @@ Home
 }
 .__home .__hero-section {
   width: 100%;
-  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: #12225b;
-  background-image: url("../images/blue-banner.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  padding: 10rem 0;
+  background-color: #132b53;
+  padding: 5rem 0 8rem 0;
   color: #ffffff;
 }
 .__home .__hero-section .row > div:last-child {
@@ -251,27 +245,34 @@ Home
   flex-direction: column;
   justify-content: center;
 }
-.__home .__hero-section .row > div {
+.__home .__hero-section .__hero-img {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
-.__home .__hero-section .img-overlay {
+.__home .__hero-section .__hero-img .img-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 50px;
-  left: -50px;
+  max-width: 400px;
+  max-height: 400px;
+  margin-top: 2rem;
+  margin-right: 4rem;
   background-color: rgba(206, 206, 206, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 0.6rem;
-  z-index: -1;
+  transform: skew(-5deg);
 }
-.__home .__hero-section img {
+.__home .__hero-section .__hero-img img {
   width: 100%;
+  max-width: 400px;
+  max-height: 400px;
   object-fit: cover;
   aspect-ratio: 3/3;
   border-radius: 0.6rem;
-  transition: padding 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   border: 6px solid rgba(255, 255, 255, 0.2);
+  transform: skew(-5deg);
 }
 .__home .__hero-section span {
   display: block;
@@ -541,14 +542,13 @@ About
   width: 100%;
   height: fit-content;
   position: relative;
-  background-color: #12225b;
+  background-color: #132b53;
   color: #ffffff;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: repeat;
   padding: 5rem 2rem;
-  margin-bottom: 5rem;
 }
 .__about .__hero-section h2 {
   font-size: 5rem;
@@ -562,20 +562,14 @@ About
   max-width: 900px;
   font-size: 0.9rem;
   margin: 0 auto;
-  margin-bottom: 4rem;
   color: #ffffff;
   font-weight: 500;
   line-height: 1.3rem;
 }
 .__about .__title {
   padding: 2.5rem;
-  background-color: #12225b;
+  background-color: #183668;
   color: #ffffff;
-  background-image: url("../images/blue-banner.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: repeat;
-  background-attachment: fixed;
 }
 .__about .__title h2 {
   font-size: 1.4rem;
@@ -630,7 +624,7 @@ Achieve
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: rgba(18, 34, 91, 0.75);
+  background-color: #132b53;
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -651,7 +645,7 @@ Achieve
 .__updates .__list-achieve,
 .__updates .__list-updates {
   width: 100%;
-  background-color: #fff;
+  background-color: #d1dde8;
   padding: 2rem 1rem;
   padding-bottom: 6rem;
 }
@@ -661,6 +655,22 @@ Achieve
 .__updates .__list-updates .row {
   justify-content: center;
 }
+.__achieve .__list-achieve .row .tile,
+.__achieve .__list-updates .row .tile,
+.__updates .__list-achieve .row .tile,
+.__updates .__list-updates .row .tile {
+  display: flex;
+  flex-direction: column;
+}
+.__achieve .__list-achieve .row .tile > div,
+.__achieve .__list-updates .row .tile > div,
+.__updates .__list-achieve .row .tile > div,
+.__updates .__list-updates .row .tile > div {
+  background-color: #c0d0df;
+  color: #3f3f3f;
+  padding: 1rem;
+  height: 100% !important;
+}
 .__achieve .__list-achieve .row img,
 .__achieve .__list-updates .row img,
 .__updates .__list-achieve .row img,
@@ -668,7 +678,8 @@ Achieve
   width: 100%;
   object-fit: cover;
   aspect-ratio: 4/5;
-  border-radius: 0.3rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 .__achieve .__list-achieve .row img:hover,
 .__achieve .__list-updates .row img:hover,
@@ -683,7 +694,6 @@ Achieve
   font-size: 1.25rem;
   font-weight: 500;
   font-family: "PT Sans", sans-serif;
-  margin-top: 0.8rem;
 }
 .__achieve .__list-achieve .row p,
 .__achieve .__list-updates .row p,
@@ -691,22 +701,26 @@ Achieve
 .__updates .__list-updates .row p {
   font-size: 0.7rem;
   font-weight: 500;
-  margin-bottom: 0;
+  margin: 0.4rem 0;
   color: rgba(63, 63, 63, 0.8);
 }
 .__achieve .__list-achieve .row a,
 .__achieve .__list-updates .row a,
 .__updates .__list-achieve .row a,
 .__updates .__list-updates .row a {
-  color: #c0d0df;
+  background-color: #83a7e2;
+  color: #183668;
+  text-decoration: none;
   font-size: 0.8rem;
   font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
 }
 .__achieve .__list-achieve .row a:hover,
 .__achieve .__list-updates .row a:hover,
 .__updates .__list-achieve .row a:hover,
 .__updates .__list-updates .row a:hover {
-  color: rgba(192, 208, 223, 0.5);
+  opacity: 0.8;
 }
 
 /* 
@@ -715,7 +729,7 @@ Wisdom
 --------------------------------------------- 
 */
 .__wisdom {
-  background-color: rgba(18, 34, 91, 0.75);
+  background-color: rgba(24, 54, 104, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -737,7 +751,7 @@ Contact
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: rgba(18, 34, 91, 0.75);
+  background-color: rgba(24, 54, 104, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -761,26 +775,28 @@ Contact
 .__contact .__form-section .row {
   justify-content: center;
 }
-.__contact .__form-section .row .form-group {
+.__contact .__form-section .row .md-form {
   width: 100%;
   max-width: 500px;
   margin-bottom: 1rem;
 }
-.__contact .__form-section .row .form-group input,
-.__contact .__form-section .row .form-group textarea {
+.__contact .__form-section .row .md-form input,
+.__contact .__form-section .row .md-form textarea {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(63, 63, 63, 0.5);
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 500;
 }
-.__contact .__form-section .row .form-group input:focus,
-.__contact .__form-section .row .form-group textarea:focus {
+.__contact .__form-section .row .md-form input:focus,
+.__contact .__form-section .row .md-form textarea:focus {
   outline: none;
-  border-color: #c0d0df;
+  border-color: #4183c4;
 }
-.__contact .__form-section .row .form-group textarea {
+.__contact .__form-section .row .md-form label {
+  margin-bottom: 0.5rem;
+}
+.__contact .__form-section .row .md-form textarea {
   resize: none;
   height: 150px;
 }
@@ -886,15 +902,11 @@ Media Queries
     text-align: center;
     align-items: center;
   }
-  .__home .__hero-section .img-overlay {
+  .__home .__hero-section .img-overlay,
+  .__home .__hero-section img {
     display: none;
     visibility: hidden;
     opacity: 0;
-  }
-  .__home .__hero-section img {
-    aspect-ratio: 16/9;
-    padding: 0 1rem;
-    border-width: 2px;
   }
   .__home .__hero-section h2 {
     font-size: 2.5rem;
