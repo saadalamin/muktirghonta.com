@@ -179,19 +179,19 @@
                 </svg>
             </div>
             <div class="navbar-brand">
-                <a href="https://muktirghonta.com/"><img src="https://muktirghonta.com/assets/images/logo.png"
+                <a href="https://www.muktirghonta.com/"><img src="https://www.muktirghonta.com/assets/images/logo.png"
                         alt="Muktir Ghonta"></a>
             </div>
         </div>
         <div class="__right">
             <div class="__menu-2 d-none d-lg-block">
                 <div class="d-flex">
-                    <a href="https://muktirghonta.com/">Home</a>
-                    <a href="https://muktirghonta.com/about.html">About Us</a>
-                    <a href="https://muktirghonta.com/achieve.html">Achievements</a>
-                    <a href="https://muktirghonta.com/updates.html">Updates</a>
-                    <a href="https://muktirghonta.com/wisdom.html">Wisdom</a>
-                    <a href="https://muktirghonta.com/contact.html">Contact Us</a>
+                    <a href="https://www.muktirghonta.com/">Home</a>
+                    <a href="https://www.muktirghonta.com/about.html">About Us</a>
+                    <a href="https://www.muktirghonta.com/achieve.html">Achievements</a>
+                    <a href="https://www.muktirghonta.com/updates.html">Updates</a>
+                    <a href="https://www.muktirghonta.com/wisdom.html">Wisdom</a>
+                    <a href="https://www.muktirghonta.com/contact.html">Contact Us</a>
                 </div>
             </div>
             <div class="__search-btn btn-round-effect" data-bs-toggle="modal" data-bs-target="#searchPage">
@@ -207,12 +207,12 @@
         <div class="btn-close btn-round-effect" data-bs-toggle="offcanvas" data-bs-target="#menuPage">
         </div>
         <div class="d-flex flex-column">
-            <a href="https://muktirghonta.com/">Home</a>
-            <a href="https://muktirghonta.com/about.html">About Us</a>
-            <a href="https://muktirghonta.com/achieve.html">Achievements</a>
-            <a href="https://muktirghonta.com/updates.html">Updates</a>
-            <a href="https://muktirghonta.com/wisdom.html">Wisdom</a>
-            <a href="https://muktirghonta.com/contact.html">Contact Us</a>
+            <a href="https://www.muktirghonta.com/">Home</a>
+            <a href="https://www.muktirghonta.com/about.html">About Us</a>
+            <a href="https://www.muktirghonta.com/achieve.html">Achievements</a>
+            <a href="https://www.muktirghonta.com/updates.html">Updates</a>
+            <a href="https://www.muktirghonta.com/wisdom.html">Wisdom</a>
+            <a href="https://www.muktirghonta.com/contact.html">Contact Us</a>
         </div>
     </div>
 
@@ -224,23 +224,23 @@
 
         <p>
             If you're sure the address is correct, try checking your spelling or
-            <a href="https://muktirghonta.com/">return to the home page</a>. If you're not sure what happened,
+            <a href="https://www.muktirghonta.com/">return to the home page</a>. If you're not sure what happened,
             try waiting a few
             minutes and reloading the page. Because it can sometimes takes a few
             minutes for a newly pushed site to propagate to servers worldwide.
         </p>
 
         <div id="suggestions">
-            <a href="https://muktirghonta.com/">Home page</a> &mdash;
-            <a href="https://muktirghonta.com/about.html">About Us</a>
+            <a href="https://www.muktirghonta.com/">Home page</a> &mdash;
+            <a href="https://www.muktirghonta.com/about.html">About Us</a>
         </div>
 
         <a href="/" class="logo logo-img-1x">
-            <img height="32" title="" alt="" src="https://muktirghonta.com/assets/images/logo.png">
+            <img height="32" title="" alt="" src="https://www.muktirghonta.com/assets/images/logo.png">
         </a>
 
         <a href="/" class="logo logo-img-2x">
-            <img height="32" title="" alt="" src="https://muktirghonta.com/assets/images/logo.png">
+            <img height="32" title="" alt="" src="https://www.muktirghonta.com/assets/images/logo.png">
         </a>
     </div>
 </body>

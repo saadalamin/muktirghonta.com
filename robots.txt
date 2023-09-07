@@ -6,4 +6,4 @@ Allow: /about.html
 Allow: /achieve.html
 Allow: /updates.html
 
-Sitemap: https://muktirghonta.com/sitemap.xml
+Sitemap: https://www.muktirghonta.com/sitemap.xml
