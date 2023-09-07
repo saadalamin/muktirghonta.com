@@ -62,14 +62,13 @@
     </div>
 
     <div class="__search container d-flex justify-content-center pb-5 mt-5">
-        <div class="card text-white" id="searchPage" style="width: 100%; min-height: 50vh; max-width: 700px; background: #173870;">
+        <div class="card" id="searchPage" style="width: 100%; min-height: 50vh; max-width: 700px;">
             <div class="card-header">
                 <h5 class="modal-title">Search</h5>
             </div>
             <div class="card-body px-4" id="algolia-search-box">
                 <div class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" id="searchInput"
-                        aria-label="Search" />
+                    <input class="form-control me-2" type="search" id="searchInput" aria-label="Search" autofocus />
                 </div>
                 <div class="search-results mt-4">
                     <p class="ps-2"></p>
@@ -120,6 +119,11 @@
                         algoliaSearchResults.innerHTML = `<p class="ps-2">No Results</p>`;
                         return;
                     }
+                    hits.forEach((hit) => {
+                        if (hit.link.indexOf("http") === -1) {
+                            hit.link = `../${hit.link}`;
+                        }
+                    });
                     let searchResults = hits.map(
                         (hit) => `<hr/><div class="search-result">
                             <a href="${typeof hit.link === "undefined" ? "#" : hit.link
@@ -135,10 +139,28 @@
         };
         searchNow();
 
-        algoliaSearchInput.addEventListener("keyup", function () {
-            let urlParams = new URLSearchParams(window.location.search);
+        let previousValue = algoliaSearchInput.value;
+
+        algoliaSearchInput.addEventListener("input", function () {
+            const currentValue = algoliaSearchInput.value;
+            let newlyTypedCharacter = '';
+
+            if (currentValue.length > previousValue.length) {
+                newlyTypedCharacter = currentValue.charAt(currentValue.length - 1);
+            }
+
+            if (newlyTypedCharacter !== ' ') {
+                var str = window.location.search
+                var url = new URL(window.location.href);
+                var search_params = new URLSearchParams(url.search);
+                search_params.set('q', currentValue);
+                url.search = search_params.toString();
+                var new_url = url.toString();
+                window.history.pushState({}, '', new_url);
+            }
+
+            previousValue = currentValue;
             searchNow();
-            urlParams.set("q", algoliaSearchInput.value);
         });
     </script>
 </body>
