@@ -864,19 +864,6 @@ Footer
 
 /* 
 ---------------------------------------------
-Legal
---------------------------------------------- 
-*/
-.__legal p {
-  white-space: pre-line;
-  padding: 1.5rem 0;
-}
-.__legal > div {
-  padding: 1.5rem 0;
-}
-
-/* 
----------------------------------------------
 Media Queries
 --------------------------------------------- 
 */
@@ -933,6 +920,16 @@ Media Queries
   }
   .__home .__hero-section .vector2 {
     display: none;
+  }
+  .__home .__one-section .container > .row .__header h2 {
+    font-size: 1.7rem;
+  }
+  .__home .__one-section .container > .row p {
+    line-height: 1.4rem;
+    font-size: 0.85rem;
+  }
+  .__home .__two-section .__header h2 {
+    font-size: 1.7rem;
   }
   .__home .__two-section .__item {
     padding: 0;
