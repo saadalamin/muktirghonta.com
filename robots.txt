@@ -8,9 +8,17 @@ Allow: /about.html
 Allow: /achieve.html
 Allow: /updates.html
 Allow: /wisdom.html
-Allow: /assets/images/logo.jpg
-Allow: /assets/images/banner.jpg
+Allow: /contact.html
+Allow: /assets/
 Allow: /search
 Allow: /search/*
+Allow: /licenses/
+Allow: /LICENSE.txt
+Allow: /README.md
+Allow: /googlec2ade93edf78c9a9.html
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+Allow: /site.webmanifest
 
 Sitemap: https://www.muktirghonta.com/sitemap.xml
