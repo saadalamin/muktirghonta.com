@@ -1,9 +1,9 @@
 User-agent: *
 Disallow: *
-Allow: /$
 Disallow: /*?*
-Allow: /index.html
 Disallow: /index.html*?*
+Allow: /$
+Allow: /index.html
 Allow: /about.html
 Allow: /achieve.html
 Allow: /updates.html
