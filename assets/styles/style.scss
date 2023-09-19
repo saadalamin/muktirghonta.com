@@ -281,6 +281,7 @@ Home
     margin-right: 4rem;
     background-color: rgba(206, 206, 206, 0.1);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 0.6rem;
     transform: skew(-5deg);
    }
