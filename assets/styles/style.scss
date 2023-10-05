@@ -79,7 +79,7 @@ Global styles
  $bg: transparent,
  $color: $primary-text-color,
  $svg: $primary-text-color,
- $padding: 0.5rem 1rem
+ $padding: 0.7rem 1rem
 ) {
  background-color: $bg;
  color: $color;
@@ -327,7 +327,7 @@ Home
   p {
    font-size: 1rem;
    font-weight: 400;
-   line-height: 1.7rem;
+   line-height: 2rem;
    margin-bottom: 2rem;
   }
   .btn {
@@ -376,18 +376,19 @@ Home
  /**__one-section**/
  .__one-section {
   width: 100%;
-  padding: 5rem 1.5rem;
+  padding: 8rem 1.5rem;
   background-color: $secondary-text-color;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-bottom: 1px solid rgba($secondary-color, 0.1);
   p {
    font-size: 1rem;
    font-weight: 400;
-   line-height: 1.7rem;
+   line-height: 1.85rem;
    margin-bottom: 1.5rem;
+   color: lighten($primary-text-color, 28%);
   }
   .__areas {
-   padding: 3rem 0;
+   padding: 5rem 0;
    padding-bottom: 0.85rem;
    .__area {
     text-align: center;
@@ -401,11 +402,11 @@ Home
      }
     }
     img {
-     width: 55%;
+     width: 50%;
      object-fit: cover;
      aspect-ratio: 1/1;
+     opacity: 0.9;
      border-radius: 100rem;
-     border: 8px solid rgba($secondary-color, 0.8);
      margin-bottom: 1rem;
      transition: transform 0.2s ease-in-out;
     }
@@ -414,9 +415,8 @@ Home
      font-weight: 700;
      padding: 2.5rem 0.5rem 1.8rem 0.5rem;
      text-transform: uppercase;
-     background-color: lighten($secondary-color, 10%);
-     border: 1px solid rgba(0, 0, 0, 0.05);
-     border-radius: 0.7rem;
+     border: 2px dashed $secondary-color;
+     border-radius: 0.2rem;
      margin-top: -2.5rem;
      z-index: -1;
     }
@@ -932,9 +932,9 @@ Media Queries
    }
   }
   .__two-section {
-    .__header h2 {
-     font-size: 1.7rem;
-    }
+   .__header h2 {
+    font-size: 1.7rem;
+   }
    .__item {
     padding: 0;
     background-color: transparent !important;

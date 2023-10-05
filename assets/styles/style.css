@@ -305,7 +305,7 @@ Home
 .__home .__hero-section p {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7rem;
+  line-height: 2rem;
   margin-bottom: 2rem;
 }
 .__home .__hero-section .btn {
@@ -313,7 +313,7 @@ Home
   background-color: #1b76b3;
   color: #ffffff;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   transition: transform 0.1s ease-in-out, background-color 0.2s ease-in-out;
   font-size: 0.8rem;
   font-weight: 500;
@@ -366,19 +366,20 @@ Home
 }
 .__home .__one-section {
   width: 100%;
-  padding: 5rem 1.5rem;
+  padding: 8rem 1.5rem;
   background-color: #ffffff;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-bottom: 1px solid rgba(192, 208, 223, 0.1);
 }
 .__home .__one-section p {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7rem;
+  line-height: 1.85rem;
   margin-bottom: 1.5rem;
+  color: #868686;
 }
 .__home .__one-section .__areas {
-  padding: 3rem 0;
+  padding: 5rem 0;
   padding-bottom: 0.85rem;
 }
 .__home .__one-section .__areas .__area {
@@ -394,11 +395,11 @@ Home
   border-width: 4px;
 }
 .__home .__one-section .__areas .__area img {
-  width: 55%;
+  width: 50%;
   object-fit: cover;
   aspect-ratio: 1/1;
+  opacity: 0.9;
   border-radius: 100rem;
-  border: 8px solid rgba(192, 208, 223, 0.8);
   margin-bottom: 1rem;
   transition: transform 0.2s ease-in-out;
 }
@@ -407,9 +408,8 @@ Home
   font-weight: 700;
   padding: 2.5rem 0.5rem 1.8rem 0.5rem;
   text-transform: uppercase;
-  background-color: #e2e9f0;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 0.7rem;
+  border: 2px dashed #c0d0df;
+  border-radius: 0.2rem;
   margin-top: -2.5rem;
   z-index: -1;
 }
