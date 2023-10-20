@@ -5,7 +5,7 @@ Disallow: /index.html*?*
 Allow: /$
 Allow: /index.html
 Allow: /about.html
-Allow: /achieve.html
+Allow: /works.html
 Allow: /updates.html
 Allow: /wisdom.html
 Allow: /contact.html

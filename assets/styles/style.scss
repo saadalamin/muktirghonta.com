@@ -223,6 +223,7 @@ Navigation bar
   .__menu-1 {
     padding-top: 1rem;
     user-select: none;
+    height: 100vh;
     .btn-close {
       margin-left: auto;
       margin-right: 1rem;
@@ -298,7 +299,7 @@ Home
       width: fit-content;
       font-size: 0.8rem;
       font-weight: 500;
-        padding: 0.6rem 1.3rem;
+      padding: 0.6rem 1.3rem;
       &:hover {
         background-color: rgba(#1b76b3, 0.7);
       }
@@ -593,10 +594,10 @@ About
 }
 /* 
 ---------------------------------------------
-Achieve
+Works & Updates
 --------------------------------------------- 
 */
-.__achieve,
+.__works,
 .__updates {
   /**__hero-section**/
   .__hero-section {
@@ -619,14 +620,16 @@ Achieve
     }
   }
   /**__list-section**/
-  .__list-achieve,
+  .__list-works,
   .__list-updates {
     width: 100%;
     background-color: $primary-color;
     padding: 2rem 1rem;
     padding-bottom: 6rem;
+    & > .container {
+      max-width: 900px;
+    }
     .row {
-      justify-content: center;
       .tile {
         display: flex;
         flex-direction: column;
@@ -636,6 +639,9 @@ Achieve
         color: $primary-text-color;
         padding: 1rem;
         height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
       }
       img {
         width: 100%;
@@ -651,20 +657,27 @@ Achieve
         font-size: 1.25rem;
         font-weight: 500;
         font-family: "PT Sans", sans-serif;
+        margin-bottom: auto;
       }
       p {
         font-size: 0.7rem;
         font-weight: 500;
         margin: 0.4rem 0;
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: auto;
         color: rgba($primary-text-color, 0.8);
       }
       a {
+        width: fit-content;
         background-color: lighten(#183668, 45%);
         color: #183668;
         text-decoration: none;
         font-size: 0.8rem;
         font-weight: 500;
         padding: 0.2rem 0.5rem;
+        margin-top: 0.4rem;
         border-radius: 0.2rem;
         &:hover {
           opacity: 0.8;

@@ -207,6 +207,7 @@ Navigation bar
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  height: 100vh;
 }
 .__navbar .__menu-1 .btn-close {
   margin-left: auto;
@@ -576,15 +577,15 @@ About
 
 /* 
 ---------------------------------------------
-Achieve
+Works & Updates
 --------------------------------------------- 
 */
-.__achieve,
+.__works,
 .__updates {
   /**__hero-section**/
   /**__list-section**/
 }
-.__achieve .__hero-section,
+.__works .__hero-section,
 .__updates .__hero-section {
   width: 100%;
   min-height: 30vh;
@@ -596,7 +597,7 @@ Achieve
   padding: 1rem 2rem;
   display: flex;
 }
-.__achieve .__hero-section h2,
+.__works .__hero-section h2,
 .__updates .__hero-section h2 {
   font-size: 2.2rem;
   font-weight: 800;
@@ -605,40 +606,43 @@ Achieve
   font-family: "Playfair Display", serif;
   align-self: center;
 }
-.__achieve .__list-achieve,
-.__achieve .__list-updates,
-.__updates .__list-achieve,
+.__works .__list-works,
+.__works .__list-updates,
+.__updates .__list-works,
 .__updates .__list-updates {
   width: 100%;
   background-color: #ffffff;
   padding: 2rem 1rem;
   padding-bottom: 6rem;
 }
-.__achieve .__list-achieve .row,
-.__achieve .__list-updates .row,
-.__updates .__list-achieve .row,
-.__updates .__list-updates .row {
-  justify-content: center;
+.__works .__list-works > .container,
+.__works .__list-updates > .container,
+.__updates .__list-works > .container,
+.__updates .__list-updates > .container {
+  max-width: 900px;
 }
-.__achieve .__list-achieve .row .tile,
-.__achieve .__list-updates .row .tile,
-.__updates .__list-achieve .row .tile,
+.__works .__list-works .row .tile,
+.__works .__list-updates .row .tile,
+.__updates .__list-works .row .tile,
 .__updates .__list-updates .row .tile {
   display: flex;
   flex-direction: column;
 }
-.__achieve .__list-achieve .row .tile > div,
-.__achieve .__list-updates .row .tile > div,
-.__updates .__list-achieve .row .tile > div,
+.__works .__list-works .row .tile > div,
+.__works .__list-updates .row .tile > div,
+.__updates .__list-works .row .tile > div,
 .__updates .__list-updates .row .tile > div {
   background-color: #e2e9f0;
   color: #3f3f3f;
   padding: 1rem;
   height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
-.__achieve .__list-achieve .row img,
-.__achieve .__list-updates .row img,
-.__updates .__list-achieve .row img,
+.__works .__list-works .row img,
+.__works .__list-updates .row img,
+.__updates .__list-works .row img,
 .__updates .__list-updates .row img {
   width: 100%;
   -o-object-fit: cover;
@@ -647,44 +651,52 @@ Achieve
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
-.__achieve .__list-achieve .row img:hover,
-.__achieve .__list-updates .row img:hover,
-.__updates .__list-achieve .row img:hover,
+.__works .__list-works .row img:hover,
+.__works .__list-updates .row img:hover,
+.__updates .__list-works .row img:hover,
 .__updates .__list-updates .row img:hover {
   opacity: 0.8;
 }
-.__achieve .__list-achieve .row h3,
-.__achieve .__list-updates .row h3,
-.__updates .__list-achieve .row h3,
+.__works .__list-works .row h3,
+.__works .__list-updates .row h3,
+.__updates .__list-works .row h3,
 .__updates .__list-updates .row h3 {
   font-size: 1.25rem;
   font-weight: 500;
   font-family: "PT Sans", sans-serif;
+  margin-bottom: auto;
 }
-.__achieve .__list-achieve .row p,
-.__achieve .__list-updates .row p,
-.__updates .__list-achieve .row p,
+.__works .__list-works .row p,
+.__works .__list-updates .row p,
+.__updates .__list-works .row p,
 .__updates .__list-updates .row p {
   font-size: 0.7rem;
   font-weight: 500;
   margin: 0.4rem 0;
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: auto;
   color: rgba(63, 63, 63, 0.8);
 }
-.__achieve .__list-achieve .row a,
-.__achieve .__list-updates .row a,
-.__updates .__list-achieve .row a,
+.__works .__list-works .row a,
+.__works .__list-updates .row a,
+.__updates .__list-works .row a,
 .__updates .__list-updates .row a {
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #83a7e2;
   color: #183668;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 500;
   padding: 0.2rem 0.5rem;
+  margin-top: 0.4rem;
   border-radius: 0.2rem;
 }
-.__achieve .__list-achieve .row a:hover,
-.__achieve .__list-updates .row a:hover,
-.__updates .__list-achieve .row a:hover,
+.__works .__list-works .row a:hover,
+.__works .__list-updates .row a:hover,
+.__updates .__list-works .row a:hover,
 .__updates .__list-updates .row a:hover {
   opacity: 0.8;
 }
