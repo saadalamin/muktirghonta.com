@@ -12,11 +12,9 @@
    let headerHeight = header.offsetHeight;
    let scrollTop = window.pageYOffset || window.scrollTop;
    if (scrollTop > headerHeight + 400) {
-    header.classList.add("scrolled");
     header.querySelectorAll(".navbar-brand img")[0].src =
      "assets/images/logo.png";
    } else {
-    header.classList.remove("scrolled");
     header.querySelectorAll(".navbar-brand img")[0].src =
      "assets/images/logo-cut.png";
    }

@@ -40,6 +40,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #708090;
 }
 
+::-moz-selection {
+  background-color: #1b76b3;
+  color: #fff;
+}
+
 ::selection,
 ::-moz-selection,
 ::-webkit-selection {
@@ -53,7 +58,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #183668;
+  background-color: #ffffff;
   color: #3f3f3f;
   scroll-behavior: smooth;
 }
@@ -88,6 +93,16 @@ Global styles
 .btn-round-effect:active {
   background-color: transparent;
   transform: scale(1.2);
+}
+
+.btn-primary {
+  background-color: #0073e6 !important;
+  background-image: linear-gradient(rgba(102, 178, 255, 0.5) 0%, rgba(0, 114, 229, 0.5) 100%);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  border: 0 !important;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #0073e6 !important;
 }
 
 input:hover,
@@ -135,26 +150,14 @@ Navigation bar
 --------------------------------------------- 
 */
 .__navbar {
-  background-color: #183668;
+  background-color: #ffffff;
   height: 65px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: 1000;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease-in-out;
-}
-.__navbar.scrolled {
-  background-color: white;
-  background-image: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-.__navbar.scrolled .__left svg,
-.__navbar.scrolled .__right svg {
-  fill: #3f3f3f;
-}
-.__navbar.scrolled .__right .__menu-2 a {
-  color: #3f3f3f;
-}
-.__navbar.scrolled .__right .__menu-2 a.active {
-  background-color: rgba(24, 54, 104, 0.2);
 }
 .__navbar .__left,
 .__navbar .__right {
@@ -164,7 +167,7 @@ Navigation bar
 }
 .__navbar .__left svg,
 .__navbar .__right svg {
-  fill: #fff;
+  fill: #3f3f3f;
 }
 .__navbar .__menu-btn {
   margin-left: 1rem;
@@ -172,7 +175,8 @@ Navigation bar
 .__navbar .navbar-brand img {
   width: 140px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding: 0rem 1.2rem;
 }
 .__navbar .__right {
@@ -182,7 +186,7 @@ Navigation bar
   margin-right: 1rem;
 }
 .__navbar .__right .__menu-2 a {
-  color: #ffffff;
+  color: #3f3f3f;
   font-size: 0.85rem;
   text-decoration: none;
   font-weight: 400;
@@ -198,7 +202,9 @@ Navigation bar
 }
 .__navbar .__menu-1 {
   padding-top: 1rem;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .__navbar .__menu-1 .btn-close {
   margin-left: auto;
@@ -206,6 +212,7 @@ Navigation bar
   padding: 1rem;
 }
 .__navbar .__menu-1 a {
+  width: -moz-fit-content;
   width: fit-content;
   color: #3f3f3f;
   font-size: 1rem;
@@ -236,9 +243,9 @@ Home
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: #132b53;
+  background-color: #f2f2f2;
   padding: 5rem 0 8rem 0;
-  color: #ffffff;
+  color: #3f3f3f;
 }
 .__home .__hero-section .row > div:last-child {
   display: flex;
@@ -250,30 +257,16 @@ Home
   display: flex;
   justify-content: center;
 }
-.__home .__hero-section .__hero-img .img-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
-  margin-top: 2rem;
-  margin-right: 4rem;
-  background-color: rgba(206, 206, 206, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 0.6rem;
-  transform: skew(-5deg);
-}
 .__home .__hero-section .__hero-img img {
   width: 100%;
   max-width: 400px;
   max-height: 400px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 3/3;
   border-radius: 0.6rem;
   transition: opacity 0.2s ease-in-out;
   border: 6px solid rgba(255, 255, 255, 0.2);
-  transform: skew(-5deg);
 }
 .__home .__hero-section span {
   display: block;
@@ -299,7 +292,6 @@ Home
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  color: #ffffff;
   font-family: "Montserrat", serif;
 }
 .__home .__hero-section p {
@@ -309,6 +301,7 @@ Home
   margin-bottom: 2rem;
 }
 .__home .__hero-section .btn {
+  width: -moz-fit-content;
   width: fit-content;
   background-color: #1b76b3;
   color: #ffffff;
@@ -396,7 +389,8 @@ Home
 }
 .__home .__one-section .__areas .__area img {
   width: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 1/1;
   opacity: 0.9;
   border-radius: 100rem;
@@ -478,7 +472,8 @@ Home
 }
 .__home .__two-section .__main #exploringTeam .carousel-inner .carousel-item img {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0 auto;
   max-width: 100% !important;
   border-radius: 0.5rem;
@@ -524,7 +519,8 @@ Home
 }
 .__home .__two-section .teams-group img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 16/9;
   border-radius: 0.6rem;
 }
@@ -541,9 +537,10 @@ About
 }
 .__about .__hero-section {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
-  background-color: #132b53;
+  background-color: #f2f2f2;
   color: #ffffff;
   background-image: url("../images/blue-banner.jpg");
   background-size: cover;
@@ -569,7 +566,7 @@ About
 }
 .__about .__title {
   padding: 2.5rem;
-  background-color: #183668;
+  background-color: #ffffff;
   color: #ffffff;
 }
 .__about .__title h2 {
@@ -591,7 +588,8 @@ About
 }
 .__about .__list-person .row img {
   width: 90%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 3/3;
   border-radius: 0.6rem;
 }
@@ -625,7 +623,7 @@ Achieve
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: #132b53;
+  background-color: #f2f2f2;
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -677,7 +675,8 @@ Achieve
 .__updates .__list-achieve .row img,
 .__updates .__list-updates .row img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 4/5;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -709,8 +708,8 @@ Achieve
 .__achieve .__list-updates .row a,
 .__updates .__list-achieve .row a,
 .__updates .__list-updates .row a {
-  background-color: #83a7e2;
-  color: #183668;
+  background-color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 500;
@@ -730,7 +729,7 @@ Wisdom
 --------------------------------------------- 
 */
 .__wisdom {
-  background-color: rgba(24, 54, 104, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -752,7 +751,7 @@ Contact
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: rgba(24, 54, 104, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -813,9 +812,9 @@ Footer
 --------------------------------------------- 
 */
 .__footer {
-  background-color: #bdcddd;
+  background-color: #fcfcfc;
   color: #3f3f3f;
-  padding: 7rem 1rem;
+  padding: 4rem 1rem 2rem 1rem;
 }
 .__footer p {
   font-size: 0.85rem;
@@ -858,7 +857,10 @@ Footer
 .__footer .container:last-child .row > div:nth-child(2) a img {
   width: 35px;
   height: 35px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #333;
+  border-radius: 100rem;
   margin-right: 1rem;
   filter: invert(90%);
 }
@@ -890,7 +892,6 @@ Media Queries
     text-align: center;
     align-items: center;
   }
-  .__home .__hero-section .img-overlay,
   .__home .__hero-section img {
     display: none;
     visibility: hidden;
@@ -1043,7 +1044,7 @@ Search Page
 .__404-page .logo-img-2x {
   display: none;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .__404-page .logo-img-1x {
     display: none;
   }

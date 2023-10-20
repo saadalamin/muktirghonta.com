@@ -29,7 +29,9 @@ body {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   height: 60px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: 1000;
 }
 .__navbar .__left,
@@ -45,7 +47,8 @@ body {
 .__navbar .navbar-brand img {
   width: 150px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding: 0 1.2rem;
   padding-right: 0.7rem;
 }
@@ -77,6 +80,7 @@ body {
   font-weight: 700;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: #dddddd;
 }
@@ -98,6 +102,7 @@ body {
   padding: 1.8rem 2rem;
 }
 .__home .__main .row > div > div .btn {
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 0.8rem;
   margin: 0.2rem;
@@ -172,6 +177,10 @@ body {
   padding: 0.3rem 1.2rem;
   font-size: 0.85rem;
   font-weight: 500;
+}
+.__home .__main .__browse .main .content .__add-index input::-moz-placeholder, .__home .__main .__browse .main .content .__add-index select::-moz-placeholder, .__home .__main .__browse .main .content .__insert-data input::-moz-placeholder, .__home .__main .__browse .main .content .__insert-data select::-moz-placeholder {
+  color: #959faa;
+  font-weight: 400;
 }
 .__home .__main .__browse .main .content .__add-index input::placeholder,
 .__home .__main .__browse .main .content .__add-index select::placeholder,
