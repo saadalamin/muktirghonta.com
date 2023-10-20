@@ -240,6 +240,7 @@ Home
   /**__hero-section**/
   /**__one-section**/
   /**__two-section**/
+  /** __faq-section **/
 }
 .__home .__hero-section {
   width: 100%;
@@ -490,6 +491,41 @@ Home
      object-fit: cover;
   aspect-ratio: 16/9;
   border-radius: 0.6rem;
+}
+.__home .__faq-section {
+  padding: 5rem 2rem 5rem 2rem;
+  background: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.__home .__faq-section .row > div:first-child {
+  display: flex;
+  justify-content: center;
+}
+.__home .__faq-section .row > div:first-child img {
+  width: 45%;
+  height: -moz-fit-content;
+  height: fit-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.__home .__faq-section .row .__faq-lists .accordion-button {
+  line-height: 1.5rem;
+}
+.__home .__faq-section .row .__faq-lists .accordion-body {
+  color: #727272;
+  line-height: 1.7rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.__home .__faq-section .row .__faq-lists button {
+  font-weight: 600;
+  color: #595959;
+}
+.__home .__faq-section .row .__faq-lists button:focus {
+  box-shadow: none !important;
 }
 
 /* 
