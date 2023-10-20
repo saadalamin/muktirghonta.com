@@ -31,7 +31,7 @@ Font & Reset css
 
 $primary-color: #ffffff;
 $primary-text-color: #3f3f3f;
-$secondary-color: #c0d0df;
+$secondary-color: #f7f7f7;
 $secondary-text-color: #ffffff;
 $box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 
@@ -135,7 +135,7 @@ textarea:focus {
 .__header {
   &.__header-section {
     width: 100%;
-    background-color: lighten($secondary-color, 13%);
+    background-color: $secondary-color;
     padding: 3rem 2rem;
   }
   span {
