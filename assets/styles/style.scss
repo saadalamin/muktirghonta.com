@@ -374,14 +374,14 @@ Home
           background-color: rgba(0, 115, 230, 0.1);
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
           border-radius: 100rem;
-          padding: 1rem 0;
+          padding: 1.2rem 0;
           opacity: 0.9;
           margin: 0 auto;
           margin-bottom: 1rem;
           transition: transform 0.2s ease-in-out;
           svg {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.3rem;
+            height: 2.3rem;
             fill: #0073e6;
           }
         }
@@ -526,6 +526,12 @@ Home
     background: #fff;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    .svg-highlighted {
+      background-color: rgba(#0073e6, 0.1);
+      fill: #0073e6;
+      border-radius: 0.3rem;
+      margin-right: 0.3rem;
+    }
     .row {
       & > div:first-child {
         display: flex;
