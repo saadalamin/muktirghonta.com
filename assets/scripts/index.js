@@ -100,10 +100,10 @@
       let scrollTop = window.pageYOffset || window.scrollTop;
       let scrollPercent = scrollTop / scrollArea || 0;
 
-      square1.style.right = 80 + scrollPercent * 50 + "px";
-      square2.style.right = scrollPercent * 50 * 0.6 + "px";
-      square3.style.right = 125 + scrollPercent * 20 * 0.2 + "px";
-      square4.style.opacity = 1 - scrollPercent / 8;
+      if(square1) square1.style.right = 80 + scrollPercent * 50 + "px";
+      if(square2) square2.style.right = scrollPercent * 50 * 0.6 + "px";
+      if(square3) square3.style.right = 125 + scrollPercent * 20 * 0.2 + "px";
+      if(square4) square4.style.opacity = 1 - scrollPercent / 8;
     });
 
     //////////////////////////////////

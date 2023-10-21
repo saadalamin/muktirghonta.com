@@ -26,7 +26,7 @@ Table of contents
 Font & Reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=PT+Sans:wght@500;700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=PT+Sans:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800&display=swap");
 
 $primary-color: #ffffff;
@@ -140,7 +140,7 @@ textarea:focus {
   }
   span {
     display: inline-block;
-    color: #28af34;
+    color: #0073e6;
     font-size: 0.85rem;
     font-weight: 500;
     position: relative;
@@ -154,7 +154,7 @@ textarea:focus {
       right: 0;
       width: 35px;
       height: 1px;
-      background-color: #28af34;
+      background-color: #0073e6;
       margin-top: 0.5rem;
     }
   }
@@ -372,7 +372,7 @@ Home
           width: 5rem;
           height: 5rem;
           border: 1px solid rgba(0, 115, 230, 0.2);
-          background-color: rgba(0, 115, 230, 0.1);
+          background-color: lighten(rgb(0, 115, 230), 45%);
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
           border-radius: 100rem;
           padding: 1.2rem 0;
@@ -577,27 +577,22 @@ About
     height: fit-content;
     position: relative;
     background-color: darken($primary-color, 5%);
-    color: $secondary-text-color;
-    background-image: url("../images/blue-banner.jpg");
-    background-size: cover;
-    background-position: top;
-    background-repeat: repeat;
+    color: $primary-text-color;
     padding: 5rem 2rem;
     h2 {
-      font-size: 5rem;
+      font-size: 3rem;
       font-weight: 800;
-      margin: 2.5rem 0;
-      color: $secondary-text-color;
-      font-family: "Playfair Display", serif;
+      margin: 0 0 2.5rem 0;
       text-align: center;
     }
     p {
       max-width: 900px;
       font-size: 0.9rem;
       margin: 0 auto;
-      color: $secondary-text-color;
-      font-weight: 500;
-      line-height: 1.3rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+      color: #7b858f;
+      font-family: "PT Sans", sans-serif;
     }
   }
   /**__title-section**/
@@ -747,12 +742,6 @@ Wisdom
 */
 .__wisdom {
   background-color: rgba($primary-color, 0.75);
-  background-image: url("../images/blue-banner-blur.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  .__blog-section iframe {
-    background-color: $primary-text-color;
-  }
 }
 /* 
 ---------------------------------------------
@@ -999,7 +988,7 @@ Media Queries
   .__wisdom {
     .__blog-section {
       padding: 0 !important;
-      margin-top: -2.5rem;
+      margin-top: -5.5rem;
     }
   }
   .__footer {
