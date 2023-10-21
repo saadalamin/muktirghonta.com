@@ -663,7 +663,6 @@ Works & Updates
       font-weight: 800;
       margin: 2.5rem auto;
       color: $secondary-text-color;
-      font-family: "Playfair Display", serif;
       align-self: center;
     }
   }
@@ -681,6 +680,7 @@ Works & Updates
       .tile {
         display: flex;
         flex-direction: column;
+        cursor: pointer;
       }
       .tile > div {
         background-color: #e2e9f0;
@@ -741,7 +741,7 @@ Wisdom
 --------------------------------------------- 
 */
 .__wisdom {
-  background-color: rgba($primary-color, 0.75);
+  background-color: $secondary-color;
 }
 /* 
 ---------------------------------------------
@@ -754,7 +754,7 @@ Contact
     width: 100%;
     min-height: 30vh;
     position: relative;
-    background-color: rgba($primary-color, 0.75);
+    background-color: darken(#183668, 5%);
     background-image: url("../images/blue-banner-blur.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -765,7 +765,6 @@ Contact
       font-weight: 800;
       margin: 2.5rem auto;
       color: $secondary-text-color;
-      font-family: "Playfair Display", serif;
       align-self: center;
     }
   }

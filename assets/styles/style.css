@@ -649,7 +649,6 @@ Works & Updates
   font-weight: 800;
   margin: 2.5rem auto;
   color: #ffffff;
-  font-family: "Playfair Display", serif;
   align-self: center;
 }
 .__works .__list-works,
@@ -673,6 +672,7 @@ Works & Updates
 .__updates .__list-updates .row .tile {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .__works .__list-works .row .tile > div,
 .__works .__list-updates .row .tile > div,
@@ -754,7 +754,7 @@ Wisdom
 --------------------------------------------- 
 */
 .__wisdom {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: #f7f7f7;
 }
 
 /* 
@@ -770,7 +770,7 @@ Contact
   width: 100%;
   min-height: 30vh;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: #132b53;
   background-image: url("../images/blue-banner-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -782,7 +782,6 @@ Contact
   font-weight: 800;
   margin: 2.5rem auto;
   color: #ffffff;
-  font-family: "Playfair Display", serif;
   align-self: center;
 }
 .__contact .__form-section {
