@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Panel | Muktir Ghonta</title>
+
+    <!-- ICON -->
+    <link rel="shortcut icon" href="https://www.muktirghonta.com/favicon.ico" type="img/vnd.microsoft.icon" />
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://www.muktirghonta.com/assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://www.muktirghonta.com/assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.muktirghonta.com/assets/images/favicon-16x16.png" />
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- __Style-Sheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- __Navigation-Bar -->
+    <nav class="__navbar navbar position-sticky start-0 top-0">
+        <div class="__left">
+            <div class="navbar-brand">
+                <a href="index.html"><img loading="lazy" src="https://www.muktirghonta.com/assets/images/logo.png"
+                        alt="Muktir Ghonta"></a>
+                <h3>Admin</h3>
+            </div>
+        </div>
+    </nav>
+
+    <!-- __HOME -------->
+    <div class="__home">
+        <div class="container">
+            <!-- __Main-section -->
+            <div class="__main">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-house" viewBox="0 0 22 22">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                    </svg>/Homepage</h2>
+                <section>Database Management</section>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div>
+                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-database" viewBox="0 0 22 22">
+                                    <path
+                                        d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z" />
+                                </svg>Overview</h3>
+                            <p class="text-muted m-0" style="font-size: 0.8rem;"><b>Host name is</b> :
+                                <span id="hostName">localhost</span>
+                            </p>
+                            <p class="text-muted m-0" style="font-size: 0.8rem;"><b>Database User name is</b>
+                                :
+                                <span id="dbUserName"></span>
+                            </p>
+                            <p class="text-muted m-0" style="font-size: 0.8rem;"><b>Your database name is</b> :
+                                <span id="dbName"></span>
+                            </p>
+                            <p class="text-muted m-0" style="font-size: 0.8rem;"><b>Database version is</b>
+                                :
+                                <span id="mysqlVersion"></span>
+                            </p>
+                            <br /><br />
+                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-database" viewBox="0 0 22 22">
+                                    <path
+                                        d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z" />
+                                </svg>Database Indexes</h3>
+                            <hr />
+                            <ul id="indexesName">
+                                No Indexes Found!
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div>
+                            <h3>Control Panel</h3>
+                            <p class="text-muted m-0 mt-3" style="font-size: 0.8rem;">Note: According to the theory of
+                                database, a index means a table in a database.</p>
+                            <hr />
+                            <div class="text-start">
+                                <button class="btn btn-sm btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-cloud-plus-fill"
+                                        viewBox="0 0 22 20">
+                                        <path
+                                            d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+                                    </svg>Insert new Data</button>
+                                <button class="btn btn-sm btn-success"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-database-add"
+                                        viewBox="0 0 22 20">
+                                        <path
+                                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Z" />
+                                        <path
+                                            d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z" />
+                                    </svg>Add new Index</button>
+                                <button class="btn btn-sm btn-warning"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-file-earmark-plus-fill"
+                                        viewBox="0 0 22 20">
+                                        <path
+                                            d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                                    </svg>Update data</button>
+                                <button class="btn btn-sm btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                                        height="25" fill="currentColor" class="bi bi-trash" viewBox="0 0 22 20">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                        <path
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                    </svg>Delete data</button>
+                                <button class="btn btn-sm btn-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-gear-fill"
+                                        viewBox="0 0 22 20">
+                                        <path
+                                            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                    </svg>Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section>Contact Management</section>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div>
+                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-database" viewBox="0 0 22 22">
+                                    <path
+                                        d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>Contact Lists</h3>
+                            <hr />
+                            <ol id="contactLists">
+                                <li>No Person!</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div>
+                            <h3>Control Panel</h3>
+                            <p class="text-muted m-0 mt-3" style="font-size: 0.8rem;">Note: In our database, there are
+                                <mark id="contactRecords">0</mark> records.
+                            </p>
+                            <hr />
+                            <div class="text-start">
+                                <button class="btn btn-sm btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                                        height="25" fill="currentColor" class="bi bi-trash" viewBox="0 0 22 20">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                        <path
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                    </svg>Delete All data</button>
+                                <button class="btn btn-sm btn-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-gear-fill"
+                                        viewBox="0 0 22 20">
+                                        <path
+                                            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                    </svg>Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="__browse d-none">
+                    <div class="main">
+                        <div class="topbar">
+                            <div class="close"
+                                onclick="this.parentNode.parentNode.parentNode.style.height=0;this.parentNode.parentNode.style.display='none'">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-x" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </div>
+                            <div class="__insert-data">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-cloud-plus-fill" viewBox="0 0 22 20">
+                                        <path
+                                            d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+                                    </svg>Insert new Data</h3>
+                            </div>
+                            <div class="__add-index" style="display: none;">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-database-add" viewBox="0 0 22 20">
+                                        <path
+                                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Z" />
+                                        <path
+                                            d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z" />
+                                    </svg>Add new Index</h3>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="__insert-data">
+                                <div class="input-group mb-2">
+                                    <select>
+                                        <option value="achieve">Achieve</option>
+                                        <option value="updates">Updates</option>
+                                    </select>
+                                    <button class="btn btn-sm btn-success">Insert Data</button>
+                                </div>
+                                <div class="mb-4 d-flex flex-column">
+                                    <input type="text" placeholder="Title">
+                                    <input type="text" placeholder="Description">
+                                    <input type="text" placeholder="Image ex. assets/images/folder/image.jpg">
+                                    <input type="text" placeholder="Link ex. https://example.com/section/">
+                                </div>
+                                <div class="body">
+                                    <div class="ms-3">{</div>
+                                    <div class="ms-5">"index":<span>"achieve"</span>,</div>
+                                    <div class="ms-5">"value":<span>"'id' -> '',<br />
+                                            'title' -> '',<br />
+                                            'description' -> '',<br />
+                                            'image' -> '',<br />
+                                            'link' -> ''"</span></div>
+                                    <div class="ms-3">}</div>
+                                </div>
+                            </div>
+                            <div class="__add-index" style="display: none;">
+                                <div class="input-group mb-2">
+                                    <input type="text" placeholder="Index name ex. Users">
+                                    <button class="btn btn-sm btn-success">Add Index</button>
+                                </div>
+                                <div class="input-group mb-4">
+                                    <input type="text" placeholder="Column names with comma ex. id, title, description"
+                                        value="id, title, description">
+                                </div>
+                                <div class="body">
+                                    <div class="ms-3">{</div>
+                                    <div class="ms-5">"index":<span>""</span>,</div>
+                                    <div class="ms-5">"value":<span>"'id' INT NOT NULL AUTO_INCREMENT,<br />
+                                            'title' TEXT NOT NULL,<br />
+                                            'description' TEXT NOT NULL,<br />
+                                            PRIMARY KEY('id')"</span></div>
+                                    <div class="ms-3">}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- __Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+        integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
