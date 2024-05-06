@@ -15,9 +15,7 @@ Allow: /search/*
 Allow: /licenses/
 Allow: /LICENSE.txt
 Allow: /README.md
-Allow: /googlec2ade93edf78c9a9.html
 Allow: /sitemap.xml
-Allow: /robots.txt
 Allow: /favicon.ico
 Allow: /site.webmanifest
 

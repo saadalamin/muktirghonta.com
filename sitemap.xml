@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
       <loc>https://www.muktirghonta.com/</loc>
-      <lastmod>2023-09-12</lastmod>
+      <lastmod>2024-05-06</lastmod>
       <priority>1.00</priority>
  </url>
  <url>
       <loc>https://www.muktirghonta.com/about.html</loc>
-      <lastmod>2023-09-12</lastmod>
+      <lastmod>2024-05-06</lastmod>
       <priority>0.80</priority>
  </url>
  <url>
       <loc>https://www.muktirghonta.com/works.html</loc>
-      <lastmod>2023-09-12</lastmod>
+      <lastmod>2024-05-06</lastmod>
       <priority>0.80</priority>
  </url>
  <url>
       <loc>https://www.muktirghonta.com/updates.html</loc>
-      <lastmod>2023-09-12</lastmod>
+      <lastmod>2024-05-06</lastmod>
       <priority>0.80</priority>
  </url>
  <url>
       <loc>https://www.muktirghonta.com/wisdom.html</loc>
-      <lastmod>2023-09-12</lastmod>
+      <lastmod>2024-05-06</lastmod>
+      <priority>0.80</priority>
+ </url>
+ <url>
+      <loc>https://www.muktirghonta.com/contact.html</loc>
+      <lastmod>2024-05-06</lastmod>
       <priority>0.80</priority>
  </url>
  
